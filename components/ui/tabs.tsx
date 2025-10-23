@@ -50,7 +50,7 @@ const TabsContent = React.forwardRef<
     ref={ref}
     className={cn(
       // Soft border glow on focus
-      "mt-3 rounded-lg border border-[#23C0AD]/20 bg-white/80 p-4 shadow-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#487AFA]/50 focus-visible:ring-offset-[#F1E821]/30 transition-all duration-300",
+      "mt-3 rounded-lg border border-[#23C0AD]/20 bg-transparent/80 p-4 shadow-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#487AFA]/50 focus-visible:ring-offset-[#F1E821]/30 transition-all duration-300",
       className
     )}
     {...props}
