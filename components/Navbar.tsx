@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 import { Button } from "@/components/ui/button";
-import { Menu } from "lucide-react";
+import { Menu, ChevronDown } from "lucide-react";
 import logo from "@/public/logos/E-Cell-White[1].png";
 import {
   DropdownMenu,
@@ -32,20 +32,20 @@ const navItems = [
   { name: "CONTACT US", link: "/contact" },
   { name: "MERCH", link: "/merch" },
   { name: "INITIATIVE", link: "/initiative" },
-  { name: "SJ", link: "/SJ" },
 ];
 
 const Navbar: FunctionComponent = () => {
   const [scrolling, setScrolling] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isPortrait, setIsPortrait] = useState(true);
+  const [isHoveringSJ, setIsHoveringSJ] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolling(window.scrollY > 0);
-    window.addEventListener("scroll", handleScroll);
-
     const handleResize = () => setIsPortrait(window.innerHeight > window.innerWidth);
+
     handleResize();
+    window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleResize);
 
     return () => {
@@ -56,15 +56,13 @@ const Navbar: FunctionComponent = () => {
 
   return (
     <header className="w-full min-h-fit sticky top-8 z-30 max-w-[76.5rem] mx-auto">
-      <nav className={`w-full rounded-full z-10 bg-background opacity-95 mt-1 fixed md:absolute`}>
+      <nav
+        className={`w-full rounded-full z-10 bg-background opacity-95 mt-1 fixed md:absolute`}
+      >
         <div className="relative block px-8">
           <div className="flex items-center justify-between w-full p-3 gap-1 capitalize">
             {/* Logo */}
-            <Link
-              href="/"
-              aria-label="logo"
-              className="block w-10 -m-4 items-center"
-            >
+            <Link href="/" aria-label="logo" className="block w-10 -m-4 items-center">
               <Image
                 unoptimized
                 src={logo}
@@ -77,7 +75,7 @@ const Navbar: FunctionComponent = () => {
 
             {/* Navigation */}
             {isPortrait ? (
-              // Portrait: Always Dropdown
+              // Portrait (mobile)
               <div className="relative">
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
@@ -101,13 +99,39 @@ const Navbar: FunctionComponent = () => {
                             </Link>
                           </DropdownMenuItem>
                         ))}
+
+                        {/* SJ Dropdown inside portrait */}
+                        <DropdownMenuItem>
+                          <DropdownMenu>
+                            <DropdownMenuTrigger asChild>
+                              <Button variant="ghost" className="w-full justify-start">
+                                SJ
+                              </Button>
+                            </DropdownMenuTrigger>
+                            <DropdownMenuContent className="w-56">
+                              <DropdownMenuLabel>Startup Junction</DropdownMenuLabel>
+                              <DropdownMenuSeparator />
+                              <DropdownMenuGroup>
+                                <DropdownMenuItem asChild>
+                                  <Link href="/SJ/delhi">SJ - Delhi</Link>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem asChild>
+                                  <Link href="/SJ/ahmedabad">SJ - Ahmedabad</Link>
+                                </DropdownMenuItem>
+                                <DropdownMenuItem asChild>
+                                  <Link href="/SJ/bangalore">SJ - Bangalore</Link>
+                                </DropdownMenuItem>
+                              </DropdownMenuGroup>
+                            </DropdownMenuContent>
+                          </DropdownMenu>
+                        </DropdownMenuItem>
                       </DropdownMenuGroup>
                     </DropdownMenuContent>
                   )}
                 </DropdownMenu>
               </div>
             ) : (
-              // Landscape: normal desktop navigation
+              // Landscape (desktop)
               <div className="hidden lg:flex">
                 <ul className="tracking-wide font-light text-2xl flex lg:flex-row flex-wrap justify-end items-center gap-6">
                   {navItems.map((item, index) => (
@@ -119,6 +143,44 @@ const Navbar: FunctionComponent = () => {
                       </Link>
                     </li>
                   ))}
+
+                  {/* SJ Hover Dropdown */}
+                  <li
+                    onMouseEnter={() => setIsHoveringSJ(true)}
+                    onMouseLeave={() => setIsHoveringSJ(false)}
+                  >
+                    <DropdownMenu open={isHoveringSJ} modal={false}>
+                      <DropdownMenuTrigger asChild>
+                        <Button
+                          className="text-primary-foreground flex items-center gap-1"
+                          variant="link"
+                        >
+                          SJ
+                          <ChevronDown
+                            className={`transition-transform duration-200 ${
+                              isHoveringSJ ? "rotate-180" : ""
+                            }`}
+                            size={18}
+                          />
+                        </Button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent align="end" className="w-56">
+                        <DropdownMenuLabel>Startup Junction</DropdownMenuLabel>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuGroup>
+                          <DropdownMenuItem asChild>
+                            <Link href="/SJ/delhi">SJ - Delhi</Link>
+                          </DropdownMenuItem>
+                          <DropdownMenuItem asChild>
+                            <Link href="/SJ/ahmedabad">SJ - Ahmedabad</Link>
+                          </DropdownMenuItem>
+                          <DropdownMenuItem asChild>
+                            <Link href="/SJ/bangalore">SJ - Bangalore</Link>
+                          </DropdownMenuItem>
+                        </DropdownMenuGroup>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  </li>
                 </ul>
               </div>
             )}
@@ -130,7 +192,8 @@ const Navbar: FunctionComponent = () => {
                   <Button
                     variant="default"
                     style={{
-                      background: "linear-gradient(90deg, #F1E821, #23C0AD, #487AFA)",
+                      background:
+                        "linear-gradient(90deg, #F1E821, #23C0AD, #487AFA)",
                       color: "white",
                       border: "none",
                       padding: "0.5rem 1.5rem",

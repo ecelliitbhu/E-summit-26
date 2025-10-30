@@ -35,6 +35,18 @@ const Contact: FunctionComponent = () => {
 
   return (
     <div>
+      <div className="mb-3 mt-3 text-center">
+        <p
+          className="font-bold text-3xl inline-block"
+          style={{
+            background: "linear-gradient(180deg, #F1E821, #23C0AD,#487AFA )",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          Contact Us
+        </p></div>
+        <hr/>
       <div className="m-5 flex justify-center gap-6">
         <Link
           className="hover:scale-125 transition ease-in-out"
@@ -162,15 +174,15 @@ const Contact: FunctionComponent = () => {
       {/* Address */}
       <div className="text-center mx-24 my-7">📍
         <p
-  className="font-bold text-xl inline-block"
-  style={{
-    background: "linear-gradient(90deg, #F1E821, #23C0AD,#487AFA )",
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
-  }}
->
-  Address
-</p>
+          className="font-bold text-xl inline-block"
+          style={{
+            background: "linear-gradient(90deg, #F1E821, #23C0AD,#487AFA )",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          Address
+        </p>
 
 
         <p className="text-sm">

@@ -77,6 +77,7 @@ const page: FunctionComponent<Props> = (props) => {
           </h1>
         </div>
            {/* <div
+           <div
                 className={"md:flex flex-wrap  justify-center items-start p-10"}
               >
                 {present_speakers_data.map((speaker: any, index) => (

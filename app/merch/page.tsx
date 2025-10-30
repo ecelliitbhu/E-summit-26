@@ -9,8 +9,20 @@ export default function CardWithForm() {
   return (
     <>
     <div className="flex flex-col items-center justify-center w-full min-h-screen">
+    <div className="mt-20 mb-0 text-center">
+        <p
+          className="font-bold text-3xl inline-block"
+          style={{
+            background: "linear-gradient(180deg, #F1E821, #23C0AD,#487AFA )",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
+          Merchandise
+        </p></div>
+        <hr/>
       {/* Cards Container */}
-      <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-8 mt-20 lg:mt-28">
+      <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-8 mt-5 lg:mt-5">
         {/* Card 1 */}
         <Card className="w-[90%] sm:w-[48%] md:w-[45%] lg:w-[40%] xl:w-[35%] bg-transparent border border-black bg-white rounded-lg">
           <CardContent>
