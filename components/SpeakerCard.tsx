@@ -18,9 +18,9 @@ const SpeakerCard: FunctionComponent<Props> = (props: OwnProps) => {
   return (
     <div
       className="
-        relative flex flex-col w-64 m-4 md:m-2 rounded-2xl 
+        relative flex flex-col h-full w-64 m-4 md:m-2 rounded-2xl 
         bg-gradient-to-b from-[#0A0A0A] via-[#0D0D0D] to-[#151515]
-        border border-[#23C0AD]/30 shadow-[0_0_20px_rgba(35,192,173,0.15)]
+        border border-yellow-300/50 shadow-[0_0_20px_rgba(35,192,173,0.15)]
         hover:shadow-[0_0_30px_rgba(72,122,250,0.25)]
         transition-all duration-300 hover:scale-[1.04] hover:border-[#487AFA]/40
       "
