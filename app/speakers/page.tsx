@@ -52,6 +52,31 @@ const page: FunctionComponent<Props> = (props) => {
               <TabsTrigger value="pastSpeaker">Past Speakers</TabsTrigger>
             </TabsList>
             <TabsContent value="presentSpeaker">
+              {/* <div className={"md:flex flex-wrap justify-center items-center p-10"}>
+                {present_speakers_data.map((speaker: any, index) => (
+                    <SpeakerCard
+                      name={speaker.name}
+                      des={speaker.des}
+                      instaURL={speaker.instaURL}
+                      linkedinURL={speaker.linkedinURL}
+                      // twitterURL={speaker.twitterURL}
+                      imgURL={speaker.imgURL}
+                      key={index}
+                    />
+                  ))}
+              </div> */}
+               
+              <div className={"flex justify-center mt-44"}>
+          <h1
+            className={
+              " text-6xl m-4 flex justify-center font-semibold sm:py-6 "
+            }
+            
+          >
+            COMING  SOON...
+          </h1>
+        </div>
+           {/* <div
            <div
                 className={"md:flex flex-wrap  justify-center items-start p-10"}
               >
@@ -66,7 +91,7 @@ const page: FunctionComponent<Props> = (props) => {
                     key={index}
                   />
                 ))}
-              </div>
+              </div> */}
    
             </TabsContent>
             <TabsContent value="pastSpeaker">
