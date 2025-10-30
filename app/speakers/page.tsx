@@ -66,7 +66,7 @@ const page: FunctionComponent<Props> = (props) => {
                   ))}
               </div> */}
                
-              {/* <div className={"flex justify-center mt-44"}>
+              <div className={"flex justify-center mt-44"}>
           <h1
             className={
               " text-6xl m-4 flex justify-center font-semibold sm:py-6 "
@@ -75,8 +75,8 @@ const page: FunctionComponent<Props> = (props) => {
           >
             COMING  SOON...
           </h1>
-        </div> */}
-           <div
+        </div>
+           {/* <div
                 className={"md:flex flex-wrap  justify-center items-start p-10"}
               >
                 {present_speakers_data.map((speaker: any, index) => (
@@ -90,7 +90,7 @@ const page: FunctionComponent<Props> = (props) => {
                     key={index}
                   />
                 ))}
-              </div>
+              </div> */}
    
             </TabsContent>
             <TabsContent value="pastSpeaker">
