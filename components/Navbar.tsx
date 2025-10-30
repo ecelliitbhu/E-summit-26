@@ -25,7 +25,6 @@ declare global {
 }
 
 const navItems = [
-  { name: "HOME", link: "/" },
   { name: "ITINERARY", link: "/itinerary" },
   { name: "EVENTS", link: "/events" },
   { name: "SPEAKERS", link: "/speakers" },
@@ -33,6 +32,7 @@ const navItems = [
   { name: "CONTACT US", link: "/contact" },
   { name: "MERCH", link: "/merch" },
   { name: "INITIATIVE", link: "/initiative" },
+  { name: "SJ", link: "/SJ" },
 ];
 
 const Navbar: FunctionComponent = () => {
@@ -60,7 +60,11 @@ const Navbar: FunctionComponent = () => {
         <div className="relative block px-8">
           <div className="flex items-center justify-between w-full p-3 gap-1 capitalize">
             {/* Logo */}
-            <Link href="/" aria-label="logo" className="block w-10 -m-4 items-center">
+            <Link
+              href="/"
+              aria-label="logo"
+              className="block w-10 -m-4 items-center"
+            >
               <Image
                 unoptimized
                 src={logo}
