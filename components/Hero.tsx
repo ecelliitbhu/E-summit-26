@@ -47,7 +47,7 @@ const Hero: FunctionComponent = () => {
         style={{ scale }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 6, ease: "easeInOut" }}
+        transition={{ duration: 2.2, ease: "easeInOut" }}
         className="text-center flex flex-col items-center gap-4"
       >
         {/* Gradient Heading */}
@@ -76,7 +76,7 @@ const Hero: FunctionComponent = () => {
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 4.2}}
+          transition={{ duration: 1.2, delay: 0.5}}
           className="mt-6 text-gray-300 max-w-sm sm:max-w-md md:max-w-xl text-sm sm:text-base md:text-lg font-extralight leading-relaxed hidden md:block"
         >
           Are you one of those people working day and night on that one startup
