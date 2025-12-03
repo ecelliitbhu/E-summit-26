@@ -1,4 +1,6 @@
-import React, { FunctionComponent } from "react";
+import React, { FunctionComponent} from "react";
+import Particle from "@/components/particle";
+import { motion, useScroll, useTransform } from "framer-motion";
 import {
   funEvents,
   // schoolEvents,
@@ -28,7 +30,6 @@ const gradientTextStyle = {
 const page: FunctionComponent<Props> = (props) => {
   return (
     <section className="pt-24 justify-center w-full min-h-screen">
-
       <EventsSection sectionTitle="Startup Events" events={startupEvents} />
       <EventsSection sectionTitle="Strategy Events" events={stategyEvents} />
       <EventsSection sectionTitle="Fun Events" events={funEvents} />
