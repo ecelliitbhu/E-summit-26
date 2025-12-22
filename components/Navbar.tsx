@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useEffect, FunctionComponent, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,7 +7,6 @@ import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logo from "@/public/logos/esummit26.png";
-
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,10 +15,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 const navItems = [
   { name: "EVENTS", link: "/events" },
   { name: "SPEAKERS", link: "/speakers" },
@@ -28,44 +24,32 @@ const navItems = [
   { name: "MERCH", link: "/merch" },
   { name: "INITIATIVE", link: "/initiative" },
 ];
-
 const sjCities = ["delhi", "ahmedabad", "bangalore"];
-
 const Navbar: FunctionComponent = () => {
   const pathname = usePathname();
-
   const [scrolling, setScrolling] = useState(false);
   const [isHoveringSJ, setIsHoveringSJ] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
   const hoverTimeout = useRef<NodeJS.Timeout | null>(null);
-
   useEffect(() => {
     const handleScroll = () => setScrolling(window.scrollY > 10);
-
     handleScroll();
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   const handleSJEnter = () => {
     if (hoverTimeout.current) clearTimeout(hoverTimeout.current);
     setIsHoveringSJ(true);
   };
-
   const handleSJLeave = () => {
     hoverTimeout.current = setTimeout(() => {
       setIsHoveringSJ(false);
     }, 120);
   };
-
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
-
   const gradientButtonStyle = {
     background: "linear-gradient(90deg,#F1E821,#23C0AD,#487AFA)",
   };
-
   return (
     <>
       {/* ================= HEADER ================= */}
@@ -93,7 +77,6 @@ const Navbar: FunctionComponent = () => {
         >
           {/* subtle inner ring */}
           <div className="pointer-events-none absolute inset-0 rounded-[999px] ring-1 ring-white/5" />
-
           <div className="relative px- md:px-6 py-0">
             <div className="flex items-center justify-between gap-4">
               {/* Left: logo + brand text (like Apple wordmark) */}
@@ -119,7 +102,6 @@ const Navbar: FunctionComponent = () => {
                   E‑Summit 26
                 </span> */}
               </Link>
-
               {/* ========== DESKTOP NAV (APPLE‑LIKE) ========== */}
               <div className="hidden lg:flex items-center justify-between flex-1">
                 <ul className="flex items-center gap-12 mx-auto text-[15px] font-semibold">
@@ -144,7 +126,6 @@ const Navbar: FunctionComponent = () => {
                       </li>
                     );
                   })}
-
                   {/* SJ DESKTOP - inline, like Apple “Store / Mac / iPad / … More” */}
                   <li
                     onMouseEnter={handleSJEnter}
@@ -274,7 +255,7 @@ const Navbar: FunctionComponent = () => {
         {/* Sliding sheet from top (like Apple’s global nav overlay) */}
         <div
           className={`
-            absolute top-0 left-0 right-0
+            absolute top-10 left-0 right-0
             bg-[#050505] text-white
             pt-20 pb-10 px-6
             rounded-b-3xl
@@ -285,11 +266,11 @@ const Navbar: FunctionComponent = () => {
           `}
         >
           {/* Title row inside sheet, like Apple “Store” label */}
-          <div className="mb-4 flex items-center justify-between">
-            <span className="text-xs uppercase tracking-[0.18em] text-white/50">
+          <div className="mb-6 flex items-center justify-between">
+            <span className="text-xl uppercase tracking-[0.18em] text-white/50">
               Menu
             </span>
-            <span className="text-[11px] text-white/40">E‑Summit 26</span>
+            <span className="text-[20px] text-white/40">E‑Summit 26</span>
           </div>
 
           <nav className="space-y-6">
@@ -370,9 +351,7 @@ const Navbar: FunctionComponent = () => {
           </nav>
         </div>
       </div>
-
       <ToastContainer />
-
       <Script
         src="https://www.townscript.com/static/Bookingflow/js/townscript-widget.nocache.js"
         strategy="afterInteractive"
