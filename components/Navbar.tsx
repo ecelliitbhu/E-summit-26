@@ -94,33 +94,24 @@ const Navbar: FunctionComponent = () => {
           {/* subtle inner ring */}
           <div className="pointer-events-none absolute inset-0 rounded-[999px] ring-1 ring-white/5" />
 
-          <div className="relative px- md:px-6 py-0">
+          <div className="relative px-4 md:px-6 py-1.5">
             <div className="flex items-center justify-between gap-4">
-              {/* Left: logo + brand text (like Apple wordmark) */}
+              {/* Left: logo */}
               <Link href="/" className="flex items-center gap-0 shrink-0 group">
                 <Image
                   unoptimized
                   src={logo}
                   alt="E-Summit Logo"
-                  width={170}
-                  height={96}
+                  width={150}
+                  height={80}
                   className={`
                     object-contain transition-transform duration-300
-                    ${scrolling ? "scale-[0.9]" : "scale-100"}
+                    ${scrolling ? "scale-[0.85]" : "scale-100"}
                   `}
                 />
-                {/* <span
-                  className={`
-                    hidden sm:inline-block text-[15px] tracking-[0.18em]
-                    uppercase text-white/70 group-hover:text-white
-                    transition-colors
-                  `}
-                >
-                  E‑Summit 26
-                </span> */}
               </Link>
 
-              {/* ========== DESKTOP NAV (APPLE‑LIKE) ========== */}
+              {/* ========== DESKTOP NAV ========== */}
               <div className="hidden lg:flex items-center justify-between flex-1">
                 <ul className="flex items-center gap-12 mx-auto text-[15px] font-semibold">
                   {navItems.map((item) => {
@@ -145,7 +136,6 @@ const Navbar: FunctionComponent = () => {
                     );
                   })}
 
-                  {/* SJ DESKTOP - inline, like Apple “Store / Mac / iPad / … More” */}
                   <li
                     onMouseEnter={handleSJEnter}
                     onMouseLeave={handleSJLeave}
@@ -211,7 +201,6 @@ const Navbar: FunctionComponent = () => {
                   </li>
                 </ul>
 
-                {/* Right: Register button, minimal pill like “Buy” on Apple */}
                 <Link href="/payment?type=esummit">
                   <Button
                     className="
@@ -228,22 +217,23 @@ const Navbar: FunctionComponent = () => {
                 </Link>
               </div>
 
-              {/* ========== MOBILE NAV TRIGGER (RIGHT) ========== */}
-              <div className="flex lg:hidden items-center gap-2">
+              {/* ========== MOBILE NAV TRIGGER ========== */}
+              <div className="flex lg:hidden items-center">
                 <Button
-                  variant="outline"
+                  variant="ghost"
                   className="
-                    bg-transparent border-white/15 text-white
+                    bg-transparent text-white
                     hover:bg-white/10
-                    rounded-full h-8 w-8 p-0 flex items-center justify-center
+                    rounded-full h-10 w-10 p-0 flex items-center justify-center
+                    transition-all duration-200
                   "
                   onClick={() => setIsMobileMenuOpen((prev) => !prev)}
                   aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
                 >
                   {isMobileMenuOpen ? (
-                    <X className="h-4 w-4" />
+                    <X className="h-6 w-6" />
                   ) : (
-                    <Menu className="h-4 w-4" />
+                    <Menu className="h-6 w-6" />
                   )}
                 </Button>
               </div>
@@ -252,7 +242,7 @@ const Navbar: FunctionComponent = () => {
         </nav>
       </header>
 
-      {/* ========== MOBILE FULLSCREEN MENU (APPLE‑LIKE) ========== */}
+      {/* ========== MOBILE FULLSCREEN MENU ========== */}
       <div
         className={`
           fixed inset-0 z-[9998]
@@ -261,7 +251,6 @@ const Navbar: FunctionComponent = () => {
           ${isMobileMenuOpen ? "pointer-events-auto" : "pointer-events-none"}
         `}
       >
-        {/* Dim background */}
         <div
           className={`
             absolute inset-0 bg-black/70 backdrop-blur-xl
@@ -271,30 +260,30 @@ const Navbar: FunctionComponent = () => {
           onClick={closeMobileMenu}
         />
 
-        {/* Sliding sheet from top (like Apple’s global nav overlay) */}
         <div
           className={`
             absolute top-0 left-0 right-0
             bg-[#050505] text-white
-            pt-20 pb-10 px-6
-            rounded-b-3xl
+            pt-28 pb-10 px-6
+            rounded-b-[2.5rem]
             border-b border-white/10
             shadow-[0_40px_80px_rgba(0,0,0,0.9)]
-            transform transition-transform duration-300 ease-out
+            transform transition-transform duration-500 cubic-bezier(0.16, 1, 0.3, 1)
             ${isMobileMenuOpen ? "translate-y-0" : "-translate-y-[110%]"}
           `}
         >
-          {/* Title row inside sheet, like Apple “Store” label */}
-          <div className="mb-4 flex items-center justify-between">
-            <span className="text-xs uppercase tracking-[0.18em] text-white/50">
-              Menu
+          {/* Menu Title Header inside the sheet, moved down to avoid navbar overlap */}
+          <div className="mb-6 flex items-center justify-between border-b border-white/5 pb-4">
+            <span className="text-[10px] uppercase tracking-[0.2em] font-bold text-white/40">
+               Menu
             </span>
-            <span className="text-[11px] text-white/40">E‑Summit 26</span>
+            <span className="text-[10px] uppercase tracking-[0.1em] text-white/30">
+              E‑Summit 26
+            </span>
           </div>
 
-          <nav className="space-y-6">
-            {/* Primary nav items */}
-            <ul className="space-y-1 text-[15px] font-medium">
+          <nav className="space-y-8">
+            <ul className="space-y-2 text-[17px] font-semibold tracking-tight">
               {navItems.map((item) => {
                 const isActive = pathname === item.link;
                 return (
@@ -302,31 +291,23 @@ const Navbar: FunctionComponent = () => {
                     <Link
                       href={item.link}
                       onClick={closeMobileMenu}
-                      className={`
-                        flex items-center justify-between
-                        py-2.5
-                        border-b border-white/8
-                      `}
+                      className="flex items-center justify-between py-3 border-b border-white/5"
                     >
-                      <span
-                        className={isActive ? "text-white" : "text-white/80"}
-                      >
+                      <span className={isActive ? "text-white" : "text-white/70"}>
                         {item.name}
                       </span>
-                      {/* tiny gradient pill accent */}
-                      <span className="h-[2px] w-8 rounded-full bg-gradient-to-r from-[#F1E821] via-[#23C0AD] to-[#487AFA] opacity-70" />
+                      <span className="h-[2px] w-6 rounded-full bg-gradient-to-r from-[#F1E821] to-[#487AFA] opacity-50" />
                     </Link>
                   </li>
                 );
               })}
             </ul>
 
-            {/* Startup Junction group */}
-            <div className="pt-4 border-t border-white/10">
-              <p className="text-xs uppercase tracking-[0.18em] text-white/50 mb-2">
+            <div className="pt-2">
+              <p className="text-[10px] uppercase tracking-[0.2em] text-white/40 mb-4 font-bold">
                 Startup Junction
               </p>
-              <div className="flex flex-col gap-1">
+              <div className="grid grid-cols-1 gap-1">
                 {sjCities.map((city) => (
                   <Link
                     key={city}
@@ -334,32 +315,26 @@ const Navbar: FunctionComponent = () => {
                     onClick={closeMobileMenu}
                     className="
                       flex items-center justify-between
-                      py-2 text-[14px]
-                      text-white/80 hover:text-white
+                      py-3 text-[15px]
+                      text-white/70 hover:text-white
                     "
                   >
-                    <span>
-                      SJ – {city.charAt(0).toUpperCase() + city.slice(1)}
-                    </span>
-                    <ChevronDown
-                      size={14}
-                      className="rotate-[-90deg] text-white/40"
-                    />
+                    <span>SJ – {city.charAt(0).toUpperCase() + city.slice(1)}</span>
+                    <ChevronDown size={16} className="-rotate-90 text-white/20" />
                   </Link>
                 ))}
               </div>
             </div>
 
-            {/* Register button */}
-            <div className="pt-4">
+            <div className="pt-6">
               <Link href="/payment?type=esummit" onClick={closeMobileMenu}>
                 <Button
                   className="
-                    w-full rounded-full font-semibold text-white
-                    py-2.5 text-[14px]
+                    w-full rounded-full font-bold text-white
+                    py-7 text-[16px]
                     transition-transform duration-200
-                    hover:scale-[1.02]
-                    shadow-[0_0_18px_rgba(35,192,173,0.65)]
+                    active:scale-[0.98]
+                    shadow-[0_10px_30px_rgba(35,192,173,0.4)]
                   "
                   style={gradientButtonStyle}
                 >

@@ -19,10 +19,11 @@ export default function CardWithForm() {
       {/* Interactive Background */}
       <InteractiveBackground />
 
-      <div className="flex flex-col items-center justify-center w-full min-h-screen">
-        <div className="mt-0 mb-0 text-center">
+      <div className="flex flex-col items-center w-full min-h-screen pt-32 md:pt-40">
+        {/* Merchandise Title - Increased Font Size */}
+        <div className="text-center">
           <p
-            className="font-bold text-3xl sm:text-4xl md:text-5xl inline-block"
+            className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl inline-block"
             style={{
               background: "linear-gradient(180deg, #F1E821, #23C0AD,#487AFA )",
               WebkitBackgroundClip: "text",
@@ -33,10 +34,11 @@ export default function CardWithForm() {
           </p>
         </div>
 
-        <hr />
+        <hr className="w-full opacity-0" />
 
-        <div className="flex justify-center mt-44">
-          <h1 className="text-6xl m-4 flex justify-center font-semibold sm:py-6">
+        {/* Coming Soon Container - Centralized by removing mt-44 and using flex-grow behavior */}
+        <div className="flex flex-grow items-center justify-center">
+          <h1 className="text-4xl sm:text-6xl m-4 flex justify-center font-semibold text-center">
             COMING&nbsp; SOON...
           </h1>
         </div>
@@ -99,6 +101,9 @@ export default function CardWithForm() {
             Buy Merch
           </Button>
         </Link> */}
+        
+        {/* Spacer to keep 'Coming Soon' centered relative to the whole screen if footer exists */}
+        <div className="pb-32 md:pb-40" />
       </div>
     </>
   );

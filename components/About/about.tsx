@@ -1,57 +1,54 @@
 "use client";
-import React from "react";
+
+import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+
+const NAVBAR_HEIGHT = 64; // Adjust this if your navbar is taller
+
 const About = () => {
   const textRef = useRef<HTMLParagraphElement | null>(null);
 
-  // Track scroll progress for only this paragraph
   const { scrollYProgress } = useScroll({
     target: textRef,
-    offset: ["start 90%", "end 40%"], // animation starts when enters, ends when leaving
+    offset: ["start 90%", "end 40%"],
   });
 
-  // Paragraph text
   const heroText =
     "E-Summit is a high-energy celebration where innovation, entrepreneurship, and bold ideas converge to shape the future, brought to you by the Entrepreneurship Cell, IIT (BHU).";
 
-  const words = heroText.split(" "); // split by character
+  const words = heroText.split(" ");
+
   return (
     <section
-      className="relative w-full py-20 px-4 flex justify-center items-center"
       id="about"
+      className="relative w-full flex items-center justify-center px-4 sm:px-6 md:px-8 overflow-hidden"
+      style={{
+        minHeight: `calc(100svh - ${NAVBAR_HEIGHT}px)`, // fits viewport minus navbar
+      }}
     >
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-blue-900/20 blur-[100px] rounded-full -z-10" />
+      <div className="absolute inset-0 flex items-center justify-center -z-10">
+        <div className="w-[280px] h-[180px] sm:w-[420px] sm:h-[300px] bg-blue-900/20 blur-[120px] rounded-full" />
+      </div>
 
+      {/* Card */}
       <motion.div
-        initial={{ y: 50, opacity: 0 }}
+        initial={{ y: 40, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 1, ease: "easeOut" }}
-       className="
-  relative w-full max-w-5xl 
-  bg-white/10 backdrop-blur-xl border border-white/20 
-  rounded-[2.5rem] p-8 md:p-14
-  shadow-[0_8px_32px_0_rgba(0,0,0,0.5)]
-  overflow-hidden
-
-        "
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="w-full max-w-[95vw] md:max-w-6xl bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.45)] overflow-hidden"
+        style={{
+          maxHeight: `calc(100svh - ${NAVBAR_HEIGHT + 32}px)`, // prevents overflow on small screens
+        }}
       >
-        {/* Decorative Top Gradient Line */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
-
-        <div className="text-center space-y-8">
+        {/* Card Content */}
+        <div className="flex flex-col items-center justify-center text-center gap-4 sm:gap-6 md:gap-8 px-4 sm:px-6 md:px-10 py-6 sm:py-8 md:py-12">
+          {/* Heading */}
           <h3
-            // className="text-3xl md:text-5xl font-extrabold tracking-tight"
-            className="
-    text-3xl 
-    sm:text-4xl 
-    md:text-5xl 
-    font-extrabold 
-    tracking-tight"
+            className="font-extrabold tracking-tight text-[1.8rem] sm:text-[2.2rem] md:text-[2.8rem] lg:text-[3rem]"
             style={{
-              background: "linear-gradient(90deg, #487AFA, #23C0AD, #F1E821)",
+              background: "linear-gradient(90deg,#487AFA,#23C0AD,#F1E821)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
@@ -59,14 +56,10 @@ const About = () => {
             ABOUT E-SUMMIT&apos;26
           </h3>
 
-          <div className="space-y-6 text-gray-200 leading-relaxed font-light">
-            <motion.p
+          {/* Animated Paragraph */}
+          <motion.p
             ref={textRef}
-            className="
-              text-xl sm:text-2xl md:text-3xl lg:text-4xl
-              font-medium leading-relaxed
-              flex flex-wrap justify-center
-            "
+            className="flex flex-wrap justify-center font-medium leading-snug text-[0.95rem] sm:text-[1.1rem] md:text-[1.3rem] lg:text-[1.5rem]"
           >
             {words.map((word, index) => {
               const start = index / words.length;
@@ -80,40 +73,25 @@ const About = () => {
 
               return (
                 <React.Fragment key={index}>
-                <motion.span
-                  style={{ color }}
-                  className="inline-block"
-                >
-                  {word}
-                </motion.span>
-                <span>&nbsp;</span>
-    </React.Fragment>
+                  <motion.span style={{ color }}>{word}</motion.span>
+                  <span>&nbsp;</span>
+                </React.Fragment>
               );
             })}
           </motion.p>
-            {/* <p className="text-base md:text-lg opacity-80 max-w-3xl mx-auto"> */}
-            <p className="
-  text-sm 
-  sm:text-base 
-  md:text-lg 
-  lg:text-xl 
-  leading-relaxed 
-  opacity-80 
-  max-w-3xl 
-  mx-auto
-">
 
-              
-              <span className="text-yellow-400 font-normal">
-                &quot;The drive to create, innovate and transform the future.&quot;
-              </span>
-            </p>
+          {/* Quote */}
+          <p className="opacity-80 text-[0.8rem] sm:text-[0.9rem] md:text-[1rem] lg:text-[1.1rem]">
+            <span className="text-yellow-400">
+              &quot;The drive to create, innovate and transform the future.&quot;
+            </span>
+          </p>
 
-            <p className="text-base md:text-lg opacity-80 max-w-3xl mx-auto">
-              E-Summit is where ideas are nurtured, ambitions take form, and the
-              next generation of entrepreneurs begins its journey.
-            </p>
-          </div>
+          {/* Footer Paragraph */}
+          <p className="opacity-80 text-[0.75rem] sm:text-[0.85rem] md:text-[1rem] lg:text-[1.05rem] max-w-xl">
+            E-Summit is where ideas are nurtured, ambitions take form, and the
+            next generation of entrepreneurs begins its journey.
+          </p>
         </div>
       </motion.div>
     </section>

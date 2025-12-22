@@ -1079,8 +1079,7 @@
 // };
 
 
-
-// to fix build errors---- do check
+//to fix build errors
 "use client";
 
 import React, { Suspense, useState, FunctionComponent } from "react";
@@ -1101,7 +1100,9 @@ const PageContent: FunctionComponent = () => {
 
   return (
     <section className="w-screen md:mt-14 p-4">
-      <div className="flex flex-col items-center justify-start w-full min-h-[80vh] pt-6">
+      <div className="flex flex-col items-center w-full min-h-[80vh] pt-6">
+
+        {/* -------- TOGGLE -------- */}
         <div className="flex justify-center items-center mb-8">
           <label className="flex items-center cursor-pointer select-none">
             <span
@@ -1109,7 +1110,7 @@ const PageContent: FunctionComponent = () => {
                 type === "esummit" ? "text-blue-500" : "text-white"
               }`}
             >
-              E-summit
+              E-Summit
             </span>
 
             <div className="relative">
@@ -1119,14 +1120,16 @@ const PageContent: FunctionComponent = () => {
                 checked={type === "startup_junction"}
                 onChange={handleToggle}
               />
-              <div className="block bg-gray-700 w-14 h-8 rounded-full shadow-inner"></div>
+              <div className="block bg-gray-700 w-14 h-8 rounded-full shadow-inner" />
               <div
-                className={`dot absolute top-1 w-6 h-6 rounded-full transition-transform ${
-                  type === "esummit"
-                    ? "translate-x-0 bg-white"
-                    : "translate-x-6 bg-blue-500"
-                } shadow`}
-              ></div>
+                className={`absolute top-1 left-1 w-6 h-6 rounded-full transition-transform shadow
+                  ${
+                    type === "esummit"
+                      ? "translate-x-0 bg-white"
+                      : "translate-x-6 bg-blue-500"
+                  }
+                `}
+              />
             </div>
 
             <span
@@ -1139,18 +1142,21 @@ const PageContent: FunctionComponent = () => {
           </label>
         </div>
 
-        {/* -------------- E-SUMMIT BOOKINGS -------------- */}
+        {/* -------- E-SUMMIT BOOKINGS -------- */}
         {type === "esummit" && (
           <>
+            {/* Townscript iframe */}
             <iframe
               id="ts-iframe"
               src="https://www.townscript.com/v2/widget/esummit-2026-iitbhu-103000/booking"
               height="600"
-              width="80%"
-            ></iframe>
+              className="w-full max-w-5xl border-none"
+              loading="lazy"
+            />
 
+            {/* Ticket cards */}
             <div className="flex flex-col mt-10 gap-10">
-              <div className="flex gap-10">
+              <div className="flex flex-col lg:flex-row gap-10 justify-center">
                 <TicketCard
                   title="E Summit'26 - Silver Pass"
                   info_div_classes="silver"
@@ -1177,82 +1183,11 @@ const PageContent: FunctionComponent = () => {
                   ]}
                 />
               </div>
-
-            <div className="flex sm:gap-2 xl:gap-6 flex-col sm:flex-row my-10 mx-auto ">
-              <PassCard
-                title="Silver Pass"
-                originalPrice={799}
-                priceText="₹649/-"
-                features={[
-                  { label: "Hospitality Kit", available: true },
-                  { label: "Keynote Speaker Session", available: true },
-                  { label: "Fireside Chat with Founders", available: true },
-                  { label: "Networking at Startup Expo", available: true },
-                  { label: "Events and Competitions", available: true },
-                  { label: "Access to Panel Discussions", available: true },
-                  { label: "Accomodation", available: false },
-                  {
-                    label: "Vouchers and Perks from sponsors",
-                    available: false,
-                  },
-                  { label: "E-summit Merch", available: false },
-                  {
-                    label: "Food from Fri. night to Sun. night",
-                    available: false,
-                  },
-                ]}
-              />
-              <PassCard
-                title="Gold Pass"
-                originalPrice={2099}
-                priceText="₹1899/-"
-                features={[
-                  { label: "Hospitality Kit", available: true },
-                  { label: "Keynote Speaker Session", available: true },
-                  { label: "Fireside Chat with Founders", available: true },
-                  { label: "Networking at Startup Expo", available: true },
-                  { label: "Events and Competitions", available: true },
-                  { label: "Access to Panel Discussions", available: true },
-                  { label: "Accomodation", available: true },
-                  {
-                    label: "Vouchers and Perks from sponsors",
-                    available: true,
-                  },
-                  { label: "E-summit Merch", available: false },
-                  {
-                    label: "Food from Fri. night to Sun. night",
-                    available: false,
-                  },
-                ]}
-              />
-              <PassCard
-                title="Diamond Pass"
-                originalPrice={2399}
-                priceText="₹2199/-"
-                features={[
-                  { label: "Hospitality Kit", available: true },
-                  { label: "Keynote Speaker Session", available: true },
-                  { label: "Fireside Chat with Founders", available: true },
-                  { label: "Networking at Startup Expo", available: true },
-                  { label: "Events and Competitions", available: true },
-                  { label: "Access to Panel Discussions", available: true },
-                  { label: "Accomodation", available: true },
-                  {
-                    label: "Vouchers and Perks from sponsors",
-                    available: true,
-                  },
-                  { label: "E-summit Merch", available: true },
-                  {
-                    label: "Food from Fri. night to Sun. night",
-                    available: true,
-                  },
-                ]}
-              />
             </div>
           </>
         )}
 
-        {/* Startup junction form is removed intentionally since closed */}
+        {/* -------- STARTUP JUNCTION -------- */}
         {type === "startup_junction" && (
           <div className="text-white text-xl mt-20">
             Registrations closed!
@@ -1268,12 +1203,14 @@ const PageContent: FunctionComponent = () => {
 // -----------------------------
 export default function Page() {
   return (
-    <Suspense fallback={<div className="text-white p-10">Loading payment...</div>}>
+    <Suspense
+      fallback={<div className="text-white p-10">Loading payment...</div>}
+    >
       <PageContent />
     </Suspense>
   );
 }
 
-// Forces fresh fetch + avoids prerender crash
+// Prevent prerender issues
 export const dynamic = "force-dynamic";
 export const fetchCache = "force-no-store";
