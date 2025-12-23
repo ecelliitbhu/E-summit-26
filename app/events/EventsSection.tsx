@@ -1,18 +1,15 @@
 import React from "react";
 import EventsCard from "@/components/EventsCard";
-
 type EventProps = {
   title: string;
   description: string;
   imageUrl: string;
   eventPage: string;
 };
-
 type EventsSectionProps = {
   sectionTitle: React.ReactNode;
   events: EventProps[];
 };
-
 const EventsSection: React.FC<EventsSectionProps> = ({
   sectionTitle,
   events,
@@ -28,7 +25,6 @@ const EventsSection: React.FC<EventsSectionProps> = ({
     >
       {sectionTitle}
     </h1>
-
     <div className={"flex flex-wrap justify-center"}>
       <div
         className={
@@ -48,5 +44,4 @@ const EventsSection: React.FC<EventsSectionProps> = ({
     </div>
   </div>
 );
-
 export default EventsSection;

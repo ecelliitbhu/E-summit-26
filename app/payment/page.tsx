@@ -1085,7 +1085,9 @@
 
 import React, { Suspense, useState, FunctionComponent } from "react";
 import { useSearchParams } from "next/navigation";
-import TicketCard from "./TicketCard";
+import PassCard from "../../components/ui/TicketCard"; 
+import Link from "next/link";
+import "./../pass/pass.css"; 
 
 // -----------------------------
 // INTERNAL PAGE CONTENT
@@ -1102,6 +1104,8 @@ const PageContent: FunctionComponent = () => {
   return (
     <section className="w-screen md:mt-14 p-4">
       <div className="flex flex-col items-center justify-start w-full min-h-[80vh] pt-6">
+
+        {/* TOGGLE */}
         <div className="flex justify-center items-center mb-8">
           <label className="flex items-center cursor-pointer select-none">
             <span
@@ -1142,61 +1146,84 @@ const PageContent: FunctionComponent = () => {
         {/* -------------- E-SUMMIT BOOKINGS -------------- */}
         {type === "esummit" && (
           <>
-            <iframe
-              id="ts-iframe"
-              src="https://www.townscript.com/v2/widget/esummit-2026-iitbhu-103000/booking"
-              height="600"
-              width="80%"
-            ></iframe>
+            {/* Townscript iframe */}
+            <div className="w-full flex justify-center mb-20">
+              <iframe
+                id="ts-iframe"
+                src="https://www.townscript.com/v2/widget/esummit-2026-iitbhu-103000/booking"
+                height="600"
+                width="80%"
+                className="rounded-xl"
+              ></iframe>
+            </div>
 
-            <div className="flex flex-col mt-10 gap-10">
-              <div className="flex gap-10">
-                <TicketCard
-                  title="E Summit'26 - Silver Pass"
-                  info_div_classes="silver"
-                  features={[
-                    "Hospitality Kit",
-                    "Keynote Speaker Session",
-                    "Fireside Chat with Founders",
-                    "Networking at Startup Expo",
-                    "Events and competitions",
-                    "Access to Panel Discussions",
-                  ]}
-                />
+            {/* PASSES BELOW TOWNSCRIPT */}
+            <div className="pass-container gap-10 justify-center mb-10">
+              <PassCard
+                title="Silver Pass"
+                originalPrice={799}
+                priceText="₹649/-"
+                features={[
+                  { label: "Hospitality Kit", available: true },
+                  { label: "Keynote Speaker Session", available: true },
+                  { label: "Fireside Chat with Founders", available: true },
+                  { label: "Networking at Startup Expo", available: true },
+                  { label: "Events and Competitions", available: true },
+                  { label: "Access to Panel Discussions", available: true },
+                  { label: "Accomodation", available: false },
+                  { label: "Vouchers and Perks from sponsors", available: false },
+                  { label: "E-summit Merch", available: false },
+                  { label: "Food from Fri. night to Sun. night", available: false },
+                ]}
+              />
 
-                <TicketCard
-                  title="E Summit'26 - Gold Pass"
-                  info_div_classes="gold"
-                  features={[
-                    "Hospitality Kit",
-                    "Keynote Speaker Session",
-                    "Fireside Chat with Founders",
-                    "Networking at Startup Expo",
-                    "Events and competitions",
-                    "Access to Panel Discussions",
-                  ]}
-                />
-              </div>
+              <PassCard
+                title="Gold Pass"
+                originalPrice={2099}
+                priceText="₹1899/-"
+                features={[
+                  { label: "Hospitality Kit", available: true },
+                  { label: "Keynote Speaker Session", available: true },
+                  { label: "Fireside Chat with Founders", available: true },
+                  { label: "Networking at Startup Expo", available: true },
+                  { label: "Events and Competitions", available: true },
+                  { label: "Access to Panel Discussions", available: true },
+                  { label: "Accomodation", available: true },
+                  { label: "Vouchers and Perks from sponsors", available: true },
+                  { label: "E-summit Merch", available: false },
+                  { label: "Food from Fri. night to Sun. night", available: false },
+                ]}
+              />
 
-              <div className="mx-auto">
-                <TicketCard
-                  title="E Summit'26 - Diamond Pass"
-                  info_div_classes="diamond"
-                  features={[
-                    "Hospitality Kit",
-                    "Keynote Speaker Session",
-                    "Fireside Chat with Founders",
-                    "Networking at Startup Expo",
-                    "Events and competitions",
-                    "Access to Panel Discussions",
-                  ]}
-                />
-              </div>
+              <PassCard
+                title="Diamond Pass"
+                originalPrice={2399}
+                priceText="₹2199/-"
+                features={[
+                  { label: "Hospitality Kit", available: true },
+                  { label: "Keynote Speaker Session", available: true },
+                  { label: "Fireside Chat with Founders", available: true },
+                  { label: "Networking at Startup Expo", available: true },
+                  { label: "Events and Competitions", available: true },
+                  { label: "Access to Panel Discussions", available: true },
+                  { label: "Accomodation", available: true },
+                  { label: "Vouchers and Perks from sponsors", available: true },
+                  { label: "E-summit Merch", available: true },
+                  { label: "Food from Fri. night to Sun. night", available: true },
+                ]}
+              />
+            </div>
+
+            {/* CTA */}
+            <div className="flex justify-center mb-20">
+              <Link href="/payment">
+                <button className="pass-button">Get Pass</button>
+              </Link>
             </div>
           </>
         )}
 
-        {/* Startup junction form is removed intentionally since closed */}
+        {/* Startup Junction */}
         {type === "startup_junction" && (
           <div className="text-white text-xl mt-20">
             Registrations closed!

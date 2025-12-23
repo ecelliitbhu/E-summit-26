@@ -3,7 +3,8 @@ import {
   funEvents,
   startupEvents,
   stategyEvents,
-} from "@/app/events/eventsData";
+} 
+from "@/app/events/eventsData";
 import EventsSection from "@/app/events/EventsSection";
 import InteractiveBackground from "@/components/InteractiveBackground";
 import { Metadata } from "next";
@@ -26,26 +27,37 @@ const gradientTextStyle = {
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
 };
-
 const page: FunctionComponent<Props> = () => {
   return (
     <>
       <InteractiveBackground />
-      <section className={`pt-16 justify-center w-full min-h-screen ${poppins.className}`}>
-        <EventsSection
-          sectionTitle="Startup Events"
-          events={startupEvents}
-        />
-        <EventsSection
-          sectionTitle="Strategy Events"
-          events={stategyEvents}
-        />
-        <EventsSection
-          sectionTitle="Fun Events"
-          events={funEvents}
-        />
+
+      <section
+        className={`pt-16 w-full min-h-screen ${poppins.className}`}
+      >
+        <div className="mt-16">
+          <EventsSection
+            sectionTitle="Startup Events"
+            events={startupEvents}
+          />
+        </div>
+
+        <div className="mt-24">
+          <EventsSection
+            sectionTitle="Strategy Events"
+            events={stategyEvents}
+          />
+        </div>
+
+        <div className="mt-24">
+          <EventsSection
+            sectionTitle="Fun Events"
+            events={funEvents}
+          />
+        </div>
       </section>
     </>
   );
 };
+
 export default page;

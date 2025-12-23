@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "IIT BHU Varanasi: E-Summit'26",
     description: "E-Summit has a range of events, competitions, panel discussions, networking opportunities for every vertical of our entrepreneurial society.",
-    images: ["/logos/ecell-search-logo-blackbg.jpeg"], // CHANGE THIS TOO
+    images: ["/logos/ecell-search-logo-blackbg.jpeg"], 
   },
 };
 

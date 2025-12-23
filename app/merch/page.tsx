@@ -5,7 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import InteractiveBackground from "@/components/InteractiveBackground";
-
 export default function CardWithForm() {
   // return (
   //   <div className="flex justify-center mt-44">
@@ -17,12 +16,11 @@ export default function CardWithForm() {
   return (
     <>
       {/* Interactive Background */}
-      <InteractiveBackground />
-
+      <InteractiveBackground/>
       <div className="flex flex-col items-center justify-center w-full min-h-screen">
         <div className="mt-0 mb-0 text-center">
           <p
-            className="font-bold text-3xl sm:text-4xl md:text-5xl inline-block"
+            className="font-bold text-3xl sm:text-6xl md:text-12xl inline-block"
             style={{
               background: "linear-gradient(180deg, #F1E821, #23C0AD,#487AFA )",
               WebkitBackgroundClip: "text",
