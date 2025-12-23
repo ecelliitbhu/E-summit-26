@@ -7,8 +7,8 @@ import BookCard from "../../components/BookCard";
 export const metadata: Metadata = {
   referrer: "origin-when-cross-origin",
   title: {
-    default: "Book Recommendations | E-Summit'25 IIT BHU",
-    template: "%s | Book Recommendations | E-Summit'25 IIT BHU",
+    default: "Book Recommendations | E-Summit'26 IIT BHU",
+    template: "%s | Book Recommendations | E-Summit'26 IIT BHU",
   },
 };
 

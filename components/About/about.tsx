@@ -29,12 +29,13 @@ const About = () => {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1, ease: "easeOut" }}
-        className="
-          relative w-full max-w-5xl 
-          bg-white/5 backdrop-blur-xl border border-white/10 
-          rounded-[2.5rem] p-8 md:p-14
-          shadow-[0_8px_32px_0_rgba(0,0,0,0.36)]
-          overflow-hidden
+       className="
+  relative w-full max-w-5xl 
+  bg-white/10 backdrop-blur-xl border border-white/20 
+  rounded-[2.5rem] p-8 md:p-14
+  shadow-[0_8px_32px_0_rgba(0,0,0,0.5)]
+  overflow-hidden
+
         "
       >
         {/* Decorative Top Gradient Line */}

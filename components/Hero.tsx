@@ -8,13 +8,16 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import ScrollTicket from "./ui/ScrollTicket.jsx";
+import { AnimatedBackground } from "./AnimatedBackground";
+import ScrollTicket from "@/components/ui/ScrollTicket";
+
 
 const Hero: FunctionComponent = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 0.3], [1, 0.8]); // Adjusted scale for smoother exit
   const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
     const handleResize = () => setIsSmallScreen(window.innerWidth < 640);
@@ -41,26 +44,36 @@ const Hero: FunctionComponent = () => {
   return (
     <section className=" relative min-h-[90vh] flex flex-col justify-center items-center overflow-hidden py-2">
       {/* Background Particles */}
-      <div className="absolute inset-0 -z-10">
+      {/* <div className="absolute inset-0 -z-10">
         <Particle />
-      </div>
+      
+        
+      </div> */}
+      {/* <div className="absolute inset-0 -z-10">
+  <AnimatedBackground />
+</div> */}
 
       {/* Ambient Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
-      <ScrollTicket />
+      {/* <ScrollTicket /> */}
 
       <motion.div
         style={{ scale, opacity }}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: "easeInOut" }}
+        // className="
+        //   text-center flex flex-col items-center gap-6 z-10
+        //   p-8 md:p-14 rounded-3xl
+        //   /* GLASS CONTAINER FOR HERO CONTENT */
+        //   bg-white/5 backdrop-blur-sm border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)]
+        // "
         className="
-          text-center flex flex-col items-center gap-6 z-10 
-          p-8 md:p-14 rounded-3xl
-          /* GLASS CONTAINER FOR HERO CONTENT */
-          bg-white/5 backdrop-blur-sm border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)]
-        "
+  text-center flex flex-col items-center gap-2 z-10 
+  p-8 md:p-14 rounded-3xl
+  bg-white/10 backdrop-blur-md border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.5)]
+"
       >
         {/* Gradient Heading */}
         <h2
@@ -81,8 +94,8 @@ const Hero: FunctionComponent = () => {
           <Image
             unoptimized
             src={Logo}
-            width={isSmallScreen ? 240 : 350}
-            height={isSmallScreen ? 240 : 350}
+            width={isSmallScreen ? 320 : 480}
+            height={isSmallScreen ? 320 : 480}
             alt="E-Summit'26 Logo"
             className="relative z-10 drop-shadow-2xl transition-transform duration-500 hover:scale-105"
           />

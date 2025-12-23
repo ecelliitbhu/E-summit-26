@@ -30,13 +30,13 @@ const data = [
     idx: 4,
     question: "Will there be any networking event in the Summit?",
     answer:
-      "Yes, the E-Summit 25 will host a special networking event that will engage all the investors on board with esteemed professionals, startups and participants.",
+      "Yes, the E-Summit 26 will host a special networking event that will engage all the investors on board with esteemed professionals, startups and participants.",
   },
   {
     idx: 5,
     question: "How can a startup participate in the Summit?",
     answer:
-      "Startups can become a part of the E-Summit 2025 through the Startup Expo - where they can set up their stalls for live demos of their product, and also through multiple events including the flagship event - The Million Dollar Pitch.",
+      "Startups can become a part of the E-Summit 2026 through the Startup Expo - where they can set up their stalls for live demos of their product, and also through multiple events including the flagship event - The Million Dollar Pitch.",
   },
   {
     idx: 6,
