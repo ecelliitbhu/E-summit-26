@@ -200,7 +200,6 @@ const Contact: FunctionComponent = () => {
             WebkitTextFillColor: "transparent",
           }}
         >
-          {" "}
           Address
         </p>
         <p className="mt-2 text-sm sm:text-base">
