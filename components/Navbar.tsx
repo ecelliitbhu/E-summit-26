@@ -214,19 +214,21 @@ const Navbar: FunctionComponent = () => {
                 <Button
                   variant="outline"
                   className="
-                    bg-transparent border-white/15 text-white
-                    hover:bg-white/10
-                    rounded-full h-8 w-8 p-0 flex items-center justify-center
-                  "
-                  onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-                  aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-                >
+                    bg-transparent border-2 border-white/30 text-white
+                      hover:bg-white/20
+                      rounded-full h-14 w-14 p-0
+                    flex items-center justify-center
+                    mr-4 sm:mr-6
+                    "
+                    onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+                    aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+                  >
                   {isMobileMenuOpen ? (
-                    <X className="h-4 w-4" />
+                  <X className="h-6 w-6" />
                   ) : (
-                    <Menu className="h-4 w-4" />
-                  )}
-                </Button>
+                <Menu className="h-6 w-6" />
+                )}
+              </Button>
               </div>
             </div>
           </div>
@@ -245,7 +247,7 @@ const Navbar: FunctionComponent = () => {
         {/* Dim background */}
         <div
           className={`
-            absolute inset-0 bg-black/70 backdrop-blur-xl
+            absolute inset-0 bg-blue/70 backdrop-blur-xl
             transition-opacity duration-300
             ${isMobileMenuOpen ? "opacity-100" : "opacity-0"}
           `}
