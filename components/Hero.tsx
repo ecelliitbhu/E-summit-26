@@ -170,6 +170,4 @@ const Hero: FunctionComponent = () => {
     </section>
   );
 };
-
 export default Hero;
-
