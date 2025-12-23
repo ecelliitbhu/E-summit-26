@@ -30,12 +30,12 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        media: "(prefers-color-scheme: light)",
+        media: "(prefers-color-scheme: dark)",
         url: "/favicon-light.ico",
         href: "/favicon-light.ico",
       },
       {
-        media: "(prefers-color-scheme: dark)",
+        media: "(prefers-color-scheme: light)",
         url: "/favicon-dark.ico",
         href: "/favicon-dark.ico",
       },

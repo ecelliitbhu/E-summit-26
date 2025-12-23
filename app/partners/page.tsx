@@ -30,8 +30,8 @@ import { color } from "framer-motion";
 export const metadata: Metadata = {
   referrer: "origin-when-cross-origin",
   title: {
-    default: "Partners | E-Summit'25 IIT BHU",
-    template: "%s | Partners | E-Summit'25 IIT BHU",
+    default: "Partners | E-Summit'26 IIT BHU",
+    template: "%s | Partners | E-Summit'26 IIT BHU",
   },
 };
 interface OwnProps {}
