@@ -84,9 +84,11 @@ const page: FunctionComponent<Props> = () => {
         <Section title="Travel Partners">
           {travelPartner}
         </Section>
+
         <Section title="Logistics Partner">
           {logisticsPartner}
         </Section>
+        
         <Section title="Institute Partner">
           {instituePartner}
         </Section>
