@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/favicon-dark.ico",
+        url: "/logos/ecell-search-logo-blackbg.jpeg",
         media: "(prefers-color-scheme: dark)",
       },
       {
-        url: "/E-Cell-White[1].png",
+        url: "/logos/ecell-search-logo-whitebg.jpeg",
         media: "(prefers-color-scheme: light)",
       },
     ],
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "E-Cell IIT BHU",
     images: [
       {
-        url: "/logos/ecell-search-logo-blackbg.jpeg", // CHANGE THIS TO YOUR PREFERRED IMAGE
+        url: "/logos/ecell-search-logo-blackbg.jpeg", 
         width: 1200,
         height: 630,
         alt: "E-Summit 26 Logo",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "IIT BHU Varanasi: E-Summit'26",
     description: "E-Summit has a range of events, competitions, panel discussions, networking opportunities for every vertical of our entrepreneurial society.",
-    images: ["/logos/ecell-search-logo-blackbg.jpeg"], // CHANGE THIS TOO
+    images: ["/logos/ecell-search-logo-blackbg.jpeg"], 
   },
 };
 
