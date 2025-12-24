@@ -11,7 +11,7 @@ import InteractiveBackground from "@/components/InteractiveBackground";
 
 export default function Home() {
   return (
-    <section className="relative min-h-screen pb-8 pt-6 md:py-10 overflow-hidden">
+    <section className="relative min-h-screen w-full overflow-x-hidden">
       {/* ANIMATED BACKGROUND FOR ENTIRE PAGE */}
       <InteractiveBackground size={45} />
       <div className="fixed inset-0 -z-20">
@@ -21,18 +21,16 @@ export default function Home() {
       {/* Optional: Add a subtle ambient light glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-purple-900/20 rounded-full blur-[100px] -z-10" />
 
-      <main className="relative z-10 grid items-center gap-12 px-4 sm:px-6">
-        <Hero />
-
-        <div className="mt-12 sm:mt-16 lg:mt-20">
+      <main className="relative z-10 w-full max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 py-8 md:py-12 lg:py-16">
+        <div className="space-y-12 sm:space-y-16 lg:space-y-20">
+          <Hero />
           <Stats />
+          <About />
+          <WSYA />
+          <SlidersComponent />
+          <MarqueeComponent />
+          <FAQ />
         </div>
-
-        <About />
-        <WSYA />
-        <SlidersComponent />
-        <MarqueeComponent />
-        <FAQ />
       </main>
     </section>
   );

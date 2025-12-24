@@ -10,7 +10,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AnimatedBackground } from "./AnimatedBackground";
 import ScrollTicket from "@/components/ui/ScrollTicket";
-
+import { FaArrowRight } from "react-icons/fa"; // Only new import
 
 const Hero: FunctionComponent = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -63,12 +63,6 @@ const Hero: FunctionComponent = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: "easeInOut" }}
-        // className="
-        //   text-center flex flex-col items-center gap-6 z-10
-        //   p-8 md:p-14 rounded-3xl
-        //   /* GLASS CONTAINER FOR HERO CONTENT */
-        //   bg-white/5 backdrop-blur-sm border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)]
-        // "
         className="
   text-center flex flex-col items-center gap-2 z-10 
   p-8 md:p-14 rounded-3xl
@@ -78,7 +72,6 @@ const Hero: FunctionComponent = () => {
         {/* Gradient Heading */}
         <h2
           className="text-xl md:text-2xl font-mono tracking-widest uppercase"
-          
           style={{
             background: "linear-gradient(90deg, #487AFA, #23C0AD, #F1E821)",
             WebkitBackgroundClip: "text",
@@ -106,9 +99,7 @@ const Hero: FunctionComponent = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.5 }}
-          // className="mt-2 text-gray-200 max-w-sm sm:max-w-md md:max-w-2xl text-sm sm:text-base md:text-lg font-light leading-relaxed hidden md:block text-shadow-sm"
           className="mt-2 text-gray-200 max-w-sm sm:max-w-md md:max-w-2xl text-sm sm:text-base md:text-xl md:leading-loose md:font-normal font-light hidden md:block text-shadow-sm"
-
         >
           Are you one of those people working day and night on that one startup
           idea? Are you the one who wants to explore the world of
@@ -142,13 +133,11 @@ const Hero: FunctionComponent = () => {
                 <span className="relative z-10 text-sm md:text-base pointer-events-none">
                   Get Summit Passes
                 </span>
-                <Image
-                  src={Res}
-                  alt="Arrow"
-                  width={24}
-                  height={24}
-                  className="relative z-10 w-6 h-6 invert brightness-0"
-                />
+                
+                {/* White Circle with Arrow - FIXED */}
+                <div className="relative z-10 w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                  <FaArrowRight className="text-[#487AFA] text-sm" />
+                </div>
               </button>
             </Link>
           </motion.div>
@@ -172,8 +161,11 @@ const Hero: FunctionComponent = () => {
                 <span className="relative z-10 text-sm md:text-base pointer-events-none text-[#23C0AD] group-hover:text-white transition-colors">
                   Startup Expo
                 </span>
-                {/* Reusing arrow or different icon logic here */}
-                <div className="w-6 h-6 bg-[#23C0AD] rounded-full group-hover:bg-white transition-colors"></div>
+                
+                {/* Colored Circle with Arrow - FIXED */}
+                <div className="relative z-10 w-8 h-8 bg-[#23C0AD] group-hover:bg-white rounded-full flex items-center justify-center transition-colors">
+                  <FaArrowRight className="text-white group-hover:text-[#23C0AD] text-sm transition-colors" />
+                </div>
               </button>
             </Link>
           </motion.div>
