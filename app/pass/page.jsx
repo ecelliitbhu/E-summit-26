@@ -43,7 +43,7 @@ export default function PassPage() {
             { label: "Access to Panel Discussions", available: true },
             { label: "Accomodation", available: true },
             { label: "Vouchers and Perks from sponsors", available: true },
-            { label: "E-summit Merch", available: false },
+            { label: "E-summit Merch", available: true },
             { label: "Food from Fri. night to Sun. night", available: false },
           ]}
         />
