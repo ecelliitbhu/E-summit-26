@@ -70,16 +70,16 @@ const page: FunctionComponent<Props> = () => {
         )}
 
         {/* Platinum Partner Section */}
-        {platinumPartner && platinumPartner.length > 0 && (
+        {/* {platinumPartner && platinumPartner.length > 0 && (
           <PartnerSection 
             title="Platinum Partner" 
             partners={platinumPartner} 
             size="medium" 
           />
-        )}
+        )} */}
 
         {/* Regular Partners Sections */}
-        {associateSponsor && associateSponsor.length > 0 && (
+        {/* {associateSponsor && associateSponsor.length > 0 && (
           <PartnerSection title="Startup Partner" partners={associateSponsor} />
         )}
 
@@ -149,7 +149,7 @@ const page: FunctionComponent<Props> = () => {
 
         {startupShowcasePartner && startupShowcasePartner.length > 0 && (
           <PartnerSection title="Startup Showcase Partner" partners={startupShowcasePartner} />
-        )}
+        )} */}
       </div>
     </section>
   );
