@@ -23,6 +23,7 @@ import {
   techPartner,
   cotitleSponsor,
   platinumPartner,
+  associateSponsors
 } from "./partner_data";
 
 export const metadata: Metadata = {
@@ -42,34 +43,42 @@ const page: FunctionComponent<Props> = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 md:pt-28 pb-12">
         
         {/* Title Partners Section */}
-        <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-8 sm:mb-10">
-          Title Partners
-        </h1>
-        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-16 sm:mb-20">
-          {titleSponsor.map((partner: any, index: number) => (
-            <div key={index} className="w-full sm:w-[calc(50%-1rem)] max-w-md">
-              <PartnerCard {...partner} size="large" />
-            </div>
-          ))}
-        </div>
-
-        {/* Co-Title Partner Section */}
-        <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-8 sm:mb-10">
-          Co-Title Partner
-        </h1>
-        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mb-16 sm:mb-20">
-          {cotitleSponsor.map((partner: any, index: number) => (
-            <div key={index} className="w-full sm:w-[calc(50%-1rem)] max-w-sm">
-              <PartnerCard {...partner} size="medium" />
-            </div>
-          ))}
-        </div>
-
-        {/* Regular Partners Sections */}
-        {platinumPartner && platinumPartner.length > 0 && (
-          <PartnerSection title="Platinum Partner" partners={platinumPartner} size="medium" />
+        {titleSponsor && titleSponsor.length > 0 && (
+          <PartnerSection 
+            title="Title Partners" 
+            partners={titleSponsor} 
+            size="large" 
+          />
         )}
 
+        {/* Co-Title Partner Section */}
+        {cotitleSponsor && cotitleSponsor.length > 0 && (
+          <PartnerSection 
+            title="Co-Title Partner" 
+            partners={cotitleSponsor} 
+            size="medium" 
+          />
+        )}
+
+        {/* Associate Sponsors Section */}
+        {associateSponsors && associateSponsors.length > 0 && (
+          <PartnerSection
+            title="Associate Sponsors"
+            partners={associateSponsors}
+            size="medium"
+          />
+        )}
+
+        {/* Platinum Partner Section */}
+        {platinumPartner && platinumPartner.length > 0 && (
+          <PartnerSection 
+            title="Platinum Partner" 
+            partners={platinumPartner} 
+            size="medium" 
+          />
+        )}
+
+        {/* Regular Partners Sections */}
         {associateSponsor && associateSponsor.length > 0 && (
           <PartnerSection title="Startup Partner" partners={associateSponsor} />
         )}
@@ -148,7 +157,7 @@ const page: FunctionComponent<Props> = () => {
 
 export default page;
 
-// Partner Section Component
+// Updated Partner Section Component for Centralization
 const PartnerSection = ({
   title,
   partners,
@@ -158,14 +167,26 @@ const PartnerSection = ({
   partners: any[];
   size?: "small" | "medium" | "large";
 }) => {
+  // Logic to handle card widths based on size for centering
+  const wrapperClass = {
+    large: "w-full sm:w-[calc(50%-1rem)] max-w-md",
+    medium: "w-full sm:w-[calc(33.33%-1rem)] max-w-sm",
+    small: "w-1/2 sm:w-1/3 md:w-1/4 lg:w-1/5 max-w-[200px]"
+  };
+
   return (
     <div className="mb-16 sm:mb-20">
-      <h1 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-8 sm:mb-10">
+      <h2 className="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-8 sm:mb-10">
         {title}
-      </h1>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-5">
+      </h2>
+      {/* Using Flex instead of Grid for the container. 
+          justify-center ensures logos are always in the middle.
+      */}
+      <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8">
         {partners.map((partner: any, index: number) => (
-          <PartnerCard key={index} {...partner} size={size} />
+          <div key={index} className={`flex justify-center ${wrapperClass[size]}`}>
+            <PartnerCard {...partner} size={size} />
+          </div>
         ))}
       </div>
     </div>

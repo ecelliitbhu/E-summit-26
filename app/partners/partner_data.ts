@@ -51,23 +51,29 @@
   },
 ];*/
 export const titleSponsor = [
+  // {
+  //   name: "Saras",
+  //   imgURL: "/partners/title1.png",
+  //   siteURL: "https://sarasai.org/",
+  // },
   {
-    name: "Saras",
-    imgURL: "/partners/title1.png",
-    siteURL: "https://sarasai.org/",
+    name: "Calance Corporation",
+    imgURL: "/partners/calanceCorporation.png",
+    siteURL: "https://www.calanceus.com/",
   },
+  
+];
+export const cotitleSponsor = [
+  // {
+  //     name: "SBI",
+  //     imgURL: "/partners/SBI.png",
+  //     siteURL: "https://sbi.co.in/web/personal-banking/home",
+  //   }
   {
     name: "IBF",
     imgURL: "/partners/title2.png",
     siteURL: "https://www.iitbhufoundation.org/",
   },
-];
-export const cotitleSponsor = [
-  {
-      name: "SBI",
-      imgURL: "/partners/SBI.png",
-      siteURL: "https://sbi.co.in/web/personal-banking/home",
-    }
 ];
 export const coSponsor = [
   {
@@ -409,5 +415,17 @@ export const platinumPartner = [
     name: "ICICI",
     imgURL: "/partners/icici.png",
     siteURL: "https://www.icicibank.com/",
+  },
+];
+export const associateSponsors = [
+  {
+    name: "yesBank",
+    imgURL: "/partners/yesBank.png",
+    siteURL: "https://www.yes.bank.in/",
+  },
+  {
+    name: "NEGD",
+    imgURL: "/partners/negdLogo.png",
+    siteURL: "https://negd.gov.in/",
   },
 ];
