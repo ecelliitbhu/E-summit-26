@@ -1097,67 +1097,53 @@ const PageContent: FunctionComponent = () => {
   const initialType = searchParams?.get("type") || "esummit";
   const [type, setType] = useState(initialType);
 
-  const handleToggle = () => {
-    setType(type === "esummit" ? "startup_junction" : "esummit");
-  };
+  const tabs = [
+    { key: "esummit", label: "E-Summit" },
+    { key: "esummit_startups", label: "E-Summit for Startups" },
+    { key: "startup_junction", label: "Startup Junction" },
+  ];
 
   return (
     <section className="w-screen md:mt-14 p-4">
       <div className="flex flex-col items-center justify-start w-full min-h-[80vh] pt-6">
 
-        {/* TOGGLE */}
-        <div className="flex justify-center items-center mb-8">
-          <label className="flex items-center cursor-pointer select-none">
-            <span
-              className={`mr-3 ${
-                type === "esummit" ? "text-blue-500" : "text-white"
-              }`}
-            >
-              E-summit
-            </span>
-
-            <div className="relative">
-              <input
-                type="checkbox"
-                className="sr-only"
-                checked={type === "startup_junction"}
-                onChange={handleToggle}
-              />
-              <div className="block bg-gray-700 w-14 h-8 rounded-full shadow-inner"></div>
-              <div
-                className={`dot absolute top-1 w-6 h-6 rounded-full transition-transform ${
-                  type === "esummit"
-                    ? "translate-x-0 bg-white"
-                    : "translate-x-6 bg-blue-500"
-                } shadow`}
-              ></div>
-            </div>
-
-            <span
-              className={`ml-3 ${
-                type === "startup_junction" ? "text-blue-500" : "text-white"
-              }`}
-            >
-              Startup Junction
-            </span>
-          </label>
+        {/* ---------------- TABS ---------------- */}
+        <div className="flex gap-2 mt-14 mb-7 bg-gray-900/70 border border-gray-700 rounded-xl p-1">
+          {tabs.map((tab) => {
+            const active = type === tab.key;
+            return (
+              <button
+                key={tab.key}
+                onClick={() => setType(tab.key)}
+                className={`
+                  px-4 py-2 rounded-lg text-sm font-medium transition-all
+                  ${active
+                    ? "bg-gray-900 text-white shadow"
+                    : "text-gray-300 hover:text-white hover:bg-gray-800"}
+                `}
+              >
+                {tab.label}
+              </button>
+            );
+          })}
         </div>
 
         {/* -------------- E-SUMMIT BOOKINGS -------------- */}
-        {type === "esummit" && (
+        {(type === "esummit" || type === "esummit_startups") && (
           <>
             {/* Townscript iframe */}
-            <div className="w-full flex justify-center mb-20">
+            {(type==="esummit")&&(
+                <>
+                <div className="w-full flex justify-center mb-20">
               <iframe
                 id="ts-iframe"
                 src="https://www.townscript.com/v2/widget/esummit-2026-iitbhu-103000/booking"
                 height="600"
                 width="80%"
                 className="rounded-xl"
-              ></iframe>
+                ></iframe>
             </div>
-
-            {/* PASSES BELOW TOWNSCRIPT */}
+            {/* Passes */}
             <div className="pass-container gap-10 justify-center mb-10">
               <PassCard
                 title="Silver Pass"
@@ -1220,19 +1206,39 @@ const PageContent: FunctionComponent = () => {
                 <button className="pass-button">Get Pass</button>
               </Link>
             </div>
+            </>
+            )}
+            {(type==="esummit_startups")&&(
+                <div className="w-full flex justify-center mb-20">
+                    <iframe 
+                        id="ts-iframe" 
+                        src="https://www.townscript.com/v2/widget/esummit-26-startups-120103/booking"  
+                        height="600" 
+                        width="80%"
+                        className="rounded-xl"
+                    ></iframe>
+            </div>
+            )}
           </>
         )}
 
-        {/* Startup Junction */}
+        {/* -------------- STARTUP JUNCTION -------------- */}
         {type === "startup_junction" && (
-          <div className="text-white text-xl mt-20">
-            Registrations closed!
+          <div className="flex flex-col items-center text-center mt-20 border border-yellow-500/20 bg-black/40 rounded-2xl p-8">
+            <div className="text-4xl mb-3">😕</div>
+            <div className="font-bold text-xl text-yellow-400">
+              Registrations Closed
+            </div>
+            <div className="text-gray-400 text-sm mt-1">
+              Startup Junction registrations are no longer available.
+            </div>
           </div>
         )}
       </div>
     </section>
   );
 };
+
 
 // -----------------------------
 // DEFAULT EXPORT WRAPPER
