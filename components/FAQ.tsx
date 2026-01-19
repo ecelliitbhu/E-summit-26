@@ -12,7 +12,7 @@ const data = [
     idx: 1,
     question: "When and where is the event?",
     answer:
-      "The event is taking place from 31st Jan to 2nd Feb 2024 in IIT(BHU) Varanasi. However, some of the events demand submissions prior to the main event taking place.",
+      "The event is taking place from 30th Jan to 1st Feb 2026 in IIT(BHU) Varanasi. However, some of the events demand submissions prior to the main event taking place.",
   },
   {
     idx: 2,
