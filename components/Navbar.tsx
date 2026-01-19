@@ -18,11 +18,13 @@ import {
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 const navItems = [
-  { name: "EVENTS", link: "/events" },
-  { name: "SPEAKERS", link: "/speakers" },
-  { name: "PARTNERS", link: "/partners" },
-  { name: "MERCH", link: "/merch" },
-  { name: "INITIATIVE", link: "/initiative" },
+  { name: "Events", link: "/events" },
+  { name: "Speakers", link: "/speakers" },
+  { name: "Partners", link: "/partners" },
+  { name: "Merch", link: "/merch" },
+  { name: "Initiative", link: "/initiative" },
+  { name: "Startup-Expo", link : "startup-expo"},
+  { name: "Million Dollar Pitch" , link : "milliondollarpitch"},
 ];
 const sjCities = ["delhi", "ahmedabad", "bangalore"];
 const Navbar: FunctionComponent = () => {
@@ -104,7 +106,7 @@ const Navbar: FunctionComponent = () => {
               </Link>
               {/* ========== DESKTOP NAV (APPLE‑LIKE) ========== */}
               <div className="hidden lg:flex items-center justify-between flex-1">
-                <ul className="flex items-center gap-12 mx-auto text-[15px] font-semibold">
+                <ul className="flex items-center gap-2 mx-auto text-[15px] font-semibold">
                   {navItems.map((item) => {
                     const isActive = pathname === item.link;
                     return (

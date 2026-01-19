@@ -12,8 +12,8 @@ import { Poppins } from "next/font/google";
 export const metadata: Metadata = {
   referrer: "origin-when-cross-origin",
   title: {
-    default: "Events | E-Summit'26 IIT BHU",
-    template: "%s | Events | E-Summit'26 IIT BHU",
+    default: "Startup-Expo | E-Summit'26 IIT BHU",
+    template: "%s | Startup-Expo | E-Summit'26 IIT BHU",
   },
 };
 interface OwnProps {}
@@ -32,31 +32,9 @@ const page: FunctionComponent<Props> = () => {
     <>
       <InteractiveBackground />
 
-      <section
-        className={`pt-16 w-full min-h-screen ${poppins.className}`}
-      >
-        <div className="mt-16">
-          <EventsSection
-            sectionTitle="Startup Events"
-            events={startupEvents}
-          />
-        </div>
-
-        <div className="mt-24">
-          <EventsSection
-            sectionTitle="Strategy Events"
-            events={stategyEvents}
-          />
-        </div>
-
-        <div className="mt-24">
-          <EventsSection
-            sectionTitle="Fun Events"
-            events={funEvents}
-          />
-        </div>
-      </section>
+     
     </>
   );
 };
+
 export default page;
