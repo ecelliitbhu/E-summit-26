@@ -23,7 +23,8 @@ import {
   techPartner,
   cotitleSponsor,
   platinumPartner,
-  associateSponsors
+  associateSponsors,
+  legalServicesPartner
 } from "./partner_data";
 
 export const metadata: Metadata = {
@@ -68,6 +69,16 @@ const page: FunctionComponent<Props> = () => {
             size="medium"
           />
         )}
+
+        {/* Legal Services Partner Section */}
+{legalServicesPartner && legalServicesPartner.length > 0 && (
+  <PartnerSection
+    title="Legal Services Partner"
+    partners={legalServicesPartner}
+    size="medium"
+  />
+)}
+
 
         {/* Platinum Partner Section */}
         {/* {platinumPartner && platinumPartner.length > 0 && (

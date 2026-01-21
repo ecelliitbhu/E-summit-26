@@ -13,6 +13,37 @@ export const metadata: Metadata = {
     template: "%s | Speakers | E-Summit'26 IIT BHU",
   },
 };
+const SpeakerSection = ({
+  title,
+  speakers,
+}: {
+  title: string;
+  speakers: any[];
+}) => {
+  if (!speakers || speakers.length === 0) return null;
+
+  return (
+    <div className="w-full mb-20">
+      <h2 className="text-3xl sm:text-4xl font-semibold text-center mb-10">
+        {title}
+      </h2>
+
+      <div className="flex flex-wrap justify-center gap-10 px-6">
+        {speakers.map((speaker, index) => (
+          <SpeakerCard
+            key={index}
+            name={speaker.name}
+            des={speaker.des}
+            instaURL={speaker.instaURL}
+            linkedinURL={speaker.linkedinURL}
+            imgURL={speaker.imgURL}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
 interface OwnProps {}
 interface speaker {
   name: string;
@@ -58,12 +89,36 @@ const page: FunctionComponent<Props> = () => {
                 </TabsTrigger>
               </TabsList>
               <TabsContent value="presentSpeaker">
-                <div className="flex justify-center mt-44">
-                  <h1 className="text-6xl m-4 flex justify-center font-semibold sm:py-6">
-                    COMING&nbsp; SOON...
-                  </h1>
-                </div>
-              </TabsContent>
+  <div className="pt-16">
+
+    <SpeakerSection
+      title="Keynote Speakers"
+      speakers={present_speakers_data.keynote}
+    />
+
+    <SpeakerSection
+      title="Shark Tank Panel"
+      speakers={present_speakers_data.sharktank}
+    />
+
+    <SpeakerSection
+      title="VC Panel"
+      speakers={present_speakers_data.vcpanel}
+    />
+
+    <SpeakerSection
+      title="AI Panel"
+      speakers={present_speakers_data.aipanel}
+    />
+
+    <SpeakerSection
+      title="Gaming Panel"
+      speakers={present_speakers_data.gamingpanel}
+    />
+
+  </div>
+</TabsContent>
+
               <TabsContent value="pastSpeaker">
                 <div className="md:flex flex-wrap justify-center items-start p-10">
                   {past_speakers_data.map((speaker: any, index) => (

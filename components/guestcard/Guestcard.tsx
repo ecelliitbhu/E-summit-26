@@ -14,7 +14,10 @@ const Guestcard: FunctionComponent = (props) => {
         Current Speakers
       </p>
       <div className={styles.container}>
-        {present_speakers_data.map((GuestData, index) => (
+      {Object.values(present_speakers_data)
+  .flat()
+  .map((GuestData, index) => (
+
           <motion.div
             initial={{
               y: 200,

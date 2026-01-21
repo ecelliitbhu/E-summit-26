@@ -429,3 +429,15 @@ export const associateSponsors = [
     siteURL: "https://negd.gov.in/",
   },
 ];
+export const legalServicesPartner = [
+  {
+    name: "lawgicalStartup",
+    imgURL: "/partners/lawgicalStartup.png",
+    siteURL: "https://lawgicalstartup.com/",
+  },
+  {
+    name: "aceint",
+    imgURL: "/partners/aceint.png",
+    siteURL: "https://aceint.ai/candidate",
+  },
+];
