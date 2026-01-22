@@ -1,7 +1,7 @@
 .root {
   /* CSS Variables */
   --gap: 2rem;
-  --duration: 27s;
+  --duration: 18s;
   
   /* Layout */
   width: 100%;
@@ -92,6 +92,10 @@
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+}
+
+.reverse {
+  animation-direction: reverse;
 }
 
 /* THE ANIMATION */

@@ -1,7 +1,8 @@
 import React, { FunctionComponent } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import MarqueeComponent from "@/components/sponsorCard/sponsor_card";
+import MarqueeComponentSsp from "@/components/sponsorCard/ssp-startup-expo_sponsor-card";
+import MarqueeComponentPi from "@/components/sponsorCard/pi-startup-expo_sponsor-card";
 import {
   funEvents,
   startupEvents,
@@ -153,8 +154,11 @@ const page: FunctionComponent<Props> = () => {
         </div>
       </div>
 
-      <div className="mt-24 bg-black/40 py-16 backdrop-blur-sm">
-        <MarqueeComponent />
+      <div className="mt-2 py-16 backdrop-blur-sm">
+        <MarqueeComponentSsp />
+      </div>
+      <div className="mt-2 py-16 backdrop-blur-sm">
+        <MarqueeComponentPi />
       </div>
     
      
