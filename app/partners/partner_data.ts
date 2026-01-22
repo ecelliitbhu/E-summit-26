@@ -435,6 +435,11 @@ export const legalServicesPartner = [
     imgURL: "/partners/lawgicalStartup.png",
     siteURL: "https://lawgicalstartup.com/",
   },
+
+];
+
+export const aiInterviewPartner = [
+ 
   {
     name: "aceint",
     imgURL: "/partners/aceint.png",

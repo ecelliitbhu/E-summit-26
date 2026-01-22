@@ -394,11 +394,11 @@ export const present_speakers_data = {
   keynote:[
     {
       name: "Ashneer Grover",
-      des: "",
+      des: "Entrepreneur, Investor & Co-founder of BharatPe",
       imgURL: "/presentspeaker/ashneer.png",
       xURL: "",
       instaURL: "",
-      linkedinURL: "",
+      linkedinURL: "https://in.linkedin.com/in/ashneer",
     },
     {
       name: "Col. Rajeev Bharwan",
@@ -410,11 +410,11 @@ export const present_speakers_data = {
     },
     {
       name: "Aman Gupta",
-      des: "Ex- Boat",
+      des: "Co-founder & CMO, boAt Lifestyle",
       imgURL: "/presentspeaker/amangupta.png",
       xURL: "",
       instaURL: "",
-      linkedinURL: "",
+      linkedinURL: "https://in.linkedin.com/in/aman-gupta-7217a515",
     },
     {
       name: " Jay Chaudhery",
@@ -530,11 +530,11 @@ export const present_speakers_data = {
     },
     {
       name: "Aditya Bhatia",
-      des: "",
+      des: "Founder/Managing Director @ Medcell Pharma",
       imgURL: "/presentspeaker/adityabhatia.png",
       xURL: "",
       instaURL: "",
-      linkedinURL: "",
+      linkedinURL: "https://in.linkedin.com/in/aditya-bhatia-80595636",
     },
   ],
 

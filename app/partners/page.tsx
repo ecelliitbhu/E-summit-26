@@ -24,7 +24,8 @@ import {
   cotitleSponsor,
   platinumPartner,
   associateSponsors,
-  legalServicesPartner
+  legalServicesPartner,
+  aiInterviewPartner
 } from "./partner_data";
 
 export const metadata: Metadata = {
@@ -75,6 +76,15 @@ const page: FunctionComponent<Props> = () => {
   <PartnerSection
     title="Legal Services Partner"
     partners={legalServicesPartner}
+    size="medium"
+  />
+)}
+
+{/* AI Interview Partner Section */}
+{aiInterviewPartner && aiInterviewPartner.length > 0 && (
+  <PartnerSection
+    title="AI Interview Partner"
+    partners={aiInterviewPartner}
     size="medium"
   />
 )}

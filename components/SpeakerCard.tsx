@@ -18,7 +18,7 @@ const SpeakerCard: FunctionComponent<Props> = (props: OwnProps) => {
   return (
     <div
       className="
-        relative flex flex-col h-full w-64 m-4 md:m-2 rounded-2xl 
+        relative flex flex-col w-64 h-[430px] m-4 md:m-2 rounded-2xl
         bg-gradient-to-b from-[#0A0A0A] via-[#0D0D0D] to-[#151515]
         border border-yellow-300/50 shadow-[0_0_20px_rgba(35,192,173,0.15)]
         hover:shadow-[0_0_30px_rgba(72,122,250,0.25)]
@@ -28,7 +28,7 @@ const SpeakerCard: FunctionComponent<Props> = (props: OwnProps) => {
       {/* Image Section */}
       <div
         className="
-          relative mx-4 mt-4 overflow-hidden rounded-xl
+          relative mx-4 mt-4 h-[230px] overflow-hidden rounded-xl
           border border-[#23C0AD]/30 shadow-inner
         "
       >
@@ -39,24 +39,25 @@ const SpeakerCard: FunctionComponent<Props> = (props: OwnProps) => {
           src={props.imgURL}
           alt={props.name}
           className="
-            w-full object-cover rounded-xl 
+            w-full h-full object-cover rounded-xl
             hover:scale-105 transition-transform duration-500
           "
         />
       </div>
 
       {/* Text Section */}
-      <div className="p-6 text-center">
+      <div className="p-6 text-center flex-1 flex flex-col justify-center">
         <h4
           className="
             mb-2 font-semibold text-2xl
             bg-gradient-to-r from-[#F1E821] via-[#23C0AD] to-[#487AFA]
-            bg-clip-text text-transparent tracking-wide drop-shadow-[0_0_6px_rgba(35,192,173,0.3)]
+            bg-clip-text text-transparent tracking-wide
+            drop-shadow-[0_0_6px_rgba(35,192,173,0.3)]
           "
         >
           {props.name}
         </h4>
-        <p className="text-sm text-gray-300 leading-relaxed">
+        <p className="text-sm text-gray-300 leading-relaxed line-clamp-2">
           {props.des}
         </p>
       </div>
@@ -74,14 +75,16 @@ const SpeakerCard: FunctionComponent<Props> = (props: OwnProps) => {
           </Link>
         )}
 
-        <Link
-          className="hover:scale-125 transition-transform duration-300"
-          href={props.linkedinURL}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaLinkedin className="text-[#23C0AD] text-2xl hover:text-[#487AFA] transition-colors duration-300" />
-        </Link>
+        {props.linkedinURL && (
+          <Link
+            className="hover:scale-125 transition-transform duration-300"
+            href={props.linkedinURL}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaLinkedin className="text-[#23C0AD] text-2xl hover:text-[#487AFA] transition-colors duration-300" />
+          </Link>
+        )}
 
         {props.twitterURL && (
           <Link
@@ -95,7 +98,7 @@ const SpeakerCard: FunctionComponent<Props> = (props: OwnProps) => {
         )}
       </div>
 
-      {/* Optional glow behind card */}
+      {/* Glow Background */}
       <div className="absolute inset-0 -z-10 opacity-40 blur-[90px] bg-gradient-to-br from-[#23C0AD]/10 via-[#487AFA]/10 to-[#F1E821]/10" />
     </div>
   );
