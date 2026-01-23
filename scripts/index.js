@@ -21,24 +21,24 @@ async function generatePDF(row) {
 
     // ⚠️ Adjust Y values if alignment needs tweaking
     page.drawText(row.name, {
-        x: 186,
-        y: 657,
+        x: 182,
+        y: 615,
         size: fontSize,
         font,
         color: rgb(0, 0, 0),
     });
 
     page.drawText(row.position, {
-        x: 186,
-        y: 644,
+        x: 182,
+        y: 601,
         size: fontSize,
         font,
         color: rgb(0, 0, 0),
     });
 
     page.drawText(row.department, {
-        x: 186,
-        y: 630,
+        x: 182,
+        y: 587,
         size: fontSize,
         font,
         color: rgb(0, 0, 0),
