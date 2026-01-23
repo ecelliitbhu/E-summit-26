@@ -33,12 +33,30 @@ export default function CardWithForm() {
 
         <hr />
 
-        <div className="flex justify-center mt-44">
-          <h1 className="text-6xl m-4 flex justify-center font-semibold sm:py-6">
-            COMING&nbsp; SOON...
-          </h1>
-        </div>
+        <p className="text-white text-xl font-semibold mt-12 mb-4">
+          Official E-Summit ’26 Merchandise
+        </p>
 
+        <div className="flex justify-center mb-20">
+          <Card className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] bg-transparent border border-white rounded-lg">
+            <CardContent className="p-4">
+             <div className="w-full max-h-[420px] overflow-hidden rounded-md flex justify-center">
+                <Image
+                  unoptimized
+                  src="/images/merch.jpeg"
+                  alt="E-Summit 26 Official Merchandise"
+                  width={1200}
+                  height={600}
+                  className="max-h-[420px] w-auto object-contain"
+                />
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </>
+  );
+}
         {/* Cards Container */}
         {/* <div className="flex flex-wrap lg:flex-nowrap justify-center items-center gap-8 mt-5 lg:mt-5"> */}
         {/* Card 1 */}
@@ -97,7 +115,7 @@ export default function CardWithForm() {
             Buy Merch
           </Button>
         </Link> */}
-      </div>
-    </>
-  );
-}
+//       </div>
+//     </>
+//   );
+// }
