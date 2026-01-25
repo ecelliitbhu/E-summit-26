@@ -13,11 +13,12 @@ import "react-toastify/dist/ReactToastify.css";
 const navItems = [
     { name: "Events", link: "/events" },
     { name: "Speakers", link: "/speakers" },
+    { name: "Itinerary", link: "/itinerary" },
     { name: "Partners", link: "/partners" },
     { name: "Merch", link: "/merch" },
     { name: "Initiative", link: "/initiative" },
-    { name: "Startup-Expo", link: "startup-expo" },
-    { name: "Million Dollar Pitch", link: "milliondollarpitch" },
+    { name: "Startup-Expo", link: "/startup-expo" },
+    { name: "Million Dollar Pitch", link: "/milliondollarpitch" },
 ];
 const sjCities = ["delhi", "ahmedabad", "bangalore"];
 const Navbar: FunctionComponent = () => {

@@ -33,21 +33,22 @@ export default function CardWithForm() {
 
         <hr />
 
-        <p className="text-white text-xl font-semibold mt-12 mb-4">
+        <p className="text-white text-xl font-semibold mt-12 mb-6">
           Official E-Summit ’26 Merchandise
         </p>
 
-        <div className="flex justify-center mb-20">
-          <Card className="w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] bg-transparent border border-white rounded-lg">
-            <CardContent className="p-4">
-             <div className="w-full max-h-[420px] overflow-hidden rounded-md flex justify-center">
+        <div className="flex justify-center mb-24">
+          <Card className="w-[95%] sm:w-[90%] md:w-[85%] lg:w-[75%] bg-transparent border border-white rounded-lg">
+            <CardContent className="p-6">
+             <div className="w-full flex justify-center">
                 <Image
                   unoptimized
                   src="/images/merch.jpeg"
                   alt="E-Summit 26 Official Merchandise"
-                  width={1200}
-                  height={600}
-                  className="max-h-[420px] w-auto object-contain"
+                  width={1600}
+                  height={800}
+                  className="w-full max-w-[1200px] h-auto object-contain"
+                  priority
                 />
               </div>
             </CardContent>
