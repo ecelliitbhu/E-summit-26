@@ -395,7 +395,7 @@ export const present_speakers_data = {
     {
       name: "Ashneer Grover",
       des: "Entrepreneur, Investor & Co-founder of BharatPe",
-      imgURL: "/presentspeaker/ashneer.png",
+      imgURL: "/presentspeaker/ashneer2.jpg",
       xURL: "",
       instaURL: "",
       linkedinURL: "https://in.linkedin.com/in/ashneer",
@@ -403,7 +403,7 @@ export const present_speakers_data = {
     {
       name: "Col. Rajeev Bharwan",
       des: "Indian Army Veteran, Motivational Speaker",
-      imgURL: "/presentspeaker/colrajeev.png",
+      imgURL: "/presentspeaker/colrajeev3.png",
       xURL: "",
       instaURL: "",
       linkedinURL: "https://www.linkedin.com/in/rajeev-bharwan/?originalSubdomain=in",
@@ -411,7 +411,7 @@ export const present_speakers_data = {
     {
       name: "Aman Gupta",
       des: "Co-founder & CMO, boAt Lifestyle",
-      imgURL: "/presentspeaker/amangupta.png",
+      imgURL: "/presentspeaker/amangupta.jpg",
       xURL: "",
       instaURL: "",
       linkedinURL: "https://in.linkedin.com/in/aman-gupta-7217a515",
@@ -419,7 +419,7 @@ export const present_speakers_data = {
     {
       name: " Jay Chaudhery",
       des: "CEO, Chairman & Founder at Zscaler, Inc.",
-      imgURL: "/presentspeaker/jayc.png",
+      imgURL: "/presentspeaker/jayc2.jpg",
       xURL: "",
       instaURL: "",
       linkedinURL: "https://www.linkedin.com/in/jaychaudhry/",
