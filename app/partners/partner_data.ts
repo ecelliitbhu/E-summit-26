@@ -428,6 +428,11 @@ export const associateSponsors = [
     imgURL: "/partners/negdLogo.png",
     siteURL: "https://negd.gov.in/",
   },
+  {
+    name: "stockedge",
+    imgURL: "/partners/stockedge.png",
+    siteURL: "https://web.stockedge.com/",
+  },
 ];
 export const legalServicesPartner = [
   {
