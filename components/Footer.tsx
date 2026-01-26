@@ -92,7 +92,7 @@ export default function Footer() {
                   width="100%"
                   height="calc(100% + 64px)"
                   style={{ border: 0 }}
-                  allowFullScreen=""
+                  allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="E-Cell IIT BHU Location"

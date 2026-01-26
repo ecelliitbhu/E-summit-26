@@ -162,7 +162,7 @@ const Navbar: FunctionComponent = () => {
                                 </ul>
 
                                 {/* Right: Register button, minimal pill like “Buy” on Apple */}
-                                <Link href="https://unstop.com/competitions/million-dollar-pitch-e-summit26-iit-bhu-varanasi-iit-bhu-1603797" target="_blank">
+                                <Link href="/payment?type=esummit" target="_blank">
                                     <Button
                                         className="
                       rounded-full text-[16px] font-bold text-white
