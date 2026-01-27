@@ -116,6 +116,11 @@ const page: FunctionComponent<Props> = () => {
       speakers={present_speakers_data.gamingpanel}
     />
 
+<SpeakerSection
+      title="Comic Panel"
+      speakers={present_speakers_data.comicpanel}
+    />
+
   </div>
 </TabsContent>
 
