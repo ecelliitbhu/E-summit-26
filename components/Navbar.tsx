@@ -162,7 +162,7 @@ const Navbar: FunctionComponent = () => {
                                 </ul>
 
                                 {/* Right: Register button, minimal pill like “Buy” on Apple */}
-                                <Link href="/payment?type=esummit" target="_blank">
+                                <Link href="/payment?type=esummit">
                                     <Button
                                         className="
                       rounded-full text-[16px] font-bold text-white

@@ -43,7 +43,7 @@ const page: FunctionComponent<Props> = () => {
                             shadow-[0_0_30px_rgba(35,192,173,0.6)]
                         "
                     >
-                        <Link target="_blank" href="https://unstop.com/competitions/million-dollar-pitch-e-summit26-iit-bhu-varanasi-iit-bhu-1603797">
+                        <Link href="https://unstop.com/competitions/million-dollar-pitch-e-summit26-iit-bhu-varanasi-iit-bhu-1603797">
                             Register Now
                         </Link>
                     </Button>
