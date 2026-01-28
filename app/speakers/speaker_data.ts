@@ -659,6 +659,14 @@ export const present_speakers_data = {
       instaURL: "",
       linkedinURL: "https://www.linkedin.com/in/saurabh-zunke-933a0541/?originalSubdomain=in",
     },
+    {
+      name: "Shagun Shah",
+      des: "Investor @ Bitkraft Ventures",
+      imgURL: "/presentspeaker/shagun3.png",
+      xURL: "",
+      instaURL: "",
+      linkedinURL: "https://in.linkedin.com/in/shagunshah",
+    },
    
   ],
   comicpanel:[
