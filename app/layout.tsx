@@ -3,7 +3,7 @@ import { ClientLayout } from "./client-layout";
 
 export const metadata: Metadata = {
   title: "IIT BHU Varanasi: E-Summit'26",
-  description: "E-Summit has a range of events, competitions, panel discussions, networking opportunities for every vertical of our entrepreneurial society.",
+  description: "E-Summit is a high-energy celebration where innovation, entrepreneurship, and bold idea converge to shape the future, brought to you by the Entrepreneurship cell IIT BHU",
   
   icons: {
     icon: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   
   openGraph: {
     title: "IIT BHU Varanasi: E-Summit'26",
-    description: "E-Summit has a range of events, competitions, panel discussions, networking opportunities for every vertical of our entrepreneurial society.",
+    description: "E-Summit is a high-energy celebration where innovation, entrepreneurship, and bold idea converge to shape the future, brought to you by the Entrepreneurship cell IIT BHU",
     url: "https://esummit.ecelliitbhu.com",
     siteName: "E-Cell IIT BHU",
     images: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "IIT BHU Varanasi: E-Summit'26",
-    description: "E-Summit has a range of events, competitions, panel discussions, networking opportunities for every vertical of our entrepreneurial society.",
+    description: "E-Summit is a high-energy celebration where innovation, entrepreneurship, and bold idea converge to shape the future, brought to you by the Entrepreneurship cell IIT BHU",
     images: ["/logos/ecell-search-logo-blackbg.jpeg"], 
   },
 };
