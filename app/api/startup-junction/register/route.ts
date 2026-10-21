@@ -10,7 +10,7 @@ export const runtime = "nodejs";
 // - startup_name: string
 // - phone: string
 // - ticket_count: number
-// - city: string (e.g. Bangalore/Ahmedabad/Delhi)
+// - city: string (e.g. Bangalore/Mumbai/Delhi)
 // - attachment: File (optional)
 
 const BUCKET = "startup-junction";
