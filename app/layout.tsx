@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "IIT BHU Varanasi: E-Summit'27",
     description: "E-Summit is a high-energy celebration where innovation, entrepreneurship, and bold idea converge to shape the future, brought to you by the Entrepreneurship cell IIT BHU",
-    url: "https://esummit.ecelliitbhu.com",
+    url: "https://esummit.ecelliitbhu.in",
     siteName: "E-Cell IIT BHU",
     images: [
       {

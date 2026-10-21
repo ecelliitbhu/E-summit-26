@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://esummit.ecelliitbhu.com/sitemap",
+    sitemap: "https://esummit.ecelliitbhu.in/sitemap",
   };
 }
