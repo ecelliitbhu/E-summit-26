@@ -442,9 +442,9 @@ const Ticket = () => {
                 <div className="right">
                   <div className="decoration-divider"></div>
                   <h2>DATE</h2>
-                  <h2>31 JAN-</h2>
-                  <h2>2 FEB </h2>
-                  <h2>2026</h2>
+                  <h2>29 JAN-</h2>
+                  <h2>31 JAN</h2>
+                  <h2>2027</h2>
                   <div className="decoration-divider"></div>
                 </div>
               </div>
@@ -454,9 +454,9 @@ const Ticket = () => {
           <div className="ticket smaller">
             <div className="ticket-content">
               <div className="small-right">
-                <h1 className={"font-bold"}>Vortex</h1>
-                <h1>of</h1>
-                <h1>Visionaries</h1>
+                <h1 className={"font-bold"}>Dawn</h1>
+                <h1>of the</h1>
+                <h1>Defiant</h1>
               </div>
               <div className="small-left">
                 <h2>E-Cell</h2>
@@ -484,9 +484,9 @@ const Ticket = () => {
                 <div className="right">
                   <div className="decoration-divider"></div>
                   <h2>DATE</h2>
-                  <h2>31 JAN-</h2>
-                  <h2>2 FEB</h2>
-                  <h2>2026</h2>
+                  <h2>29 JAN-</h2>
+                  <h2>31 JAN</h2>
+                  <h2>2027</h2>
                   <div className="decoration-divider"></div>
                 </div>
               </div>
@@ -496,9 +496,9 @@ const Ticket = () => {
           <div className="ticket smaller">
             <div className="ticket-content">
               <div className="small-right">
-                <h1>Vortex</h1>
-                <h1>of</h1>
-                <h1>Visionaries</h1>
+                <h1>Dawn</h1>
+                <h1>of the</h1>
+                <h1>Defiant</h1>
               </div>
               <div className="small-left">
                 <h2>E-Cell</h2>

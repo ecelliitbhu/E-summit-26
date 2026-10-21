@@ -49,7 +49,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({
           className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 break-words"
           style={{
             background:
-              "linear-gradient(90deg, #487AFA, #23C0AD, #F1E821)",
+              "linear-gradient(90deg, #F86531, #C42F35, #13324F)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
@@ -85,9 +85,9 @@ const CustomSlider: React.FC<CustomSliderProps> = ({
                 index === activeIndex ? "scale-105 z-10" : "scale-95 opacity-80"
               }`}
             >
-              <div className="bg-gradient-to-br from-[#1e1e1e] via-[#222] to-[#2a2a2a] border border-gray-700/50 rounded-2xl shadow-lg sm:px-8 p-6 flex flex-col items-center gap-3 min-h-[220px] hover:border-[#487AFA]/40 transition-all duration-300">
+              <div className="bg-gradient-to-br from-[#1e1e1e] via-[#222] to-[#2a2a2a] border border-gray-700/50 rounded-2xl shadow-lg sm:px-8 p-6 flex flex-col items-center gap-3 min-h-[220px] hover:border-[#F86531]/40 transition-all duration-300">
                 <p className="text-green-200/90 text-center italic text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">{slide.post}</p>
-                <h3 className="text-[#F1E821] font-semibold text-lg">{slide.name}</h3>
+                <h3 className="text-[#F86531] font-semibold text-lg">{slide.name}</h3>
                 <p className="text-white text-sm text-center">{slide.description}</p>
               </div>
              
@@ -101,7 +101,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({
           ref={navigationPrev}
           className="absolute max-sm:w-7 max-sm:h-7 top-1/2 left-2 transform -translate-y-1/2 z-10 cursor-pointer w-12 h-12 flex justify-center items-center rounded-full shadow-lg hover:scale-110 transition-all"
           style={{
-            background: "linear-gradient(135deg, #487AFA, #23C0AD, #F1E821)",
+            background: "linear-gradient(135deg, #F86531, #C42F35, #13324F)",
           }}
         >
           <svg
@@ -120,7 +120,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({
           ref={navigationNext}
           className="absolute max-sm:w-7 max-sm:h-7 top-1/2 right-2 transform -translate-y-1/2 z-10 cursor-pointer w-12 h-12 flex justify-center items-center rounded-full shadow-lg hover:scale-110 transition-all"
           style={{
-            background: "linear-gradient(45deg, #487AFA, #23C0AD, #F1E821)",
+            background: "linear-gradient(45deg, #F86531, #C42F35, #13324F)",
           }}
         >
           <svg

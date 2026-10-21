@@ -6,19 +6,19 @@ import { cn } from "@/lib/utils"
 
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#487AFA] focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#13324F] focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
-        default: "bg-[#F1E821] text-black hover:bg-[#E6D900]",
+        default: "bg-[#F86531] text-black hover:bg-[#D4551E]",
         destructive:
           "bg-red-500 text-white hover:bg-red-600",
         outline:
-          "border border-[#23C0AD] text-[#23C0AD] hover:bg-[#23C0AD] hover:text-white",
+          "border border-[#C42F35] text-[#C42F35] hover:bg-[#C42F35] hover:text-white",
         secondary:
-          "bg-[#23C0AD] text-white hover:bg-[#1CA18E]",
-        ghost: "hover:bg-[#487AFA1A] text-[#487AFA]",
-        link: "text-[#487AFA] underline-offset-4 hover:underline",
+          "bg-[#C42F35] text-white hover:bg-[#A3262B]",
+        ghost: "hover:bg-[#13324F1A] text-[#13324F]",
+        link: "text-[#13324F] underline-offset-4 hover:underline",
       },
       size: {
         default: "h-10 px-4 py-2",

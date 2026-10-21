@@ -22,9 +22,9 @@ const InteractiveBackground = ({size=60}) => {
         background: `
           radial-gradient(
             circle at ${pos.x}% ${pos.y}%,
-            rgba(35,192,173,0.15),
-            rgba(72,122,250,0.12),
-            rgba(153,69,255,0.08),
+            rgba(248,101,49,0.15),
+            rgba(196,47,53,0.12),
+            rgba(19,50,79,0.12),
             rgba(0,0,0,0.95) ${size}%,
             #000000 100%
           )

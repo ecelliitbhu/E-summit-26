@@ -411,7 +411,7 @@
 // //             <div className="flex flex-col mt-10 gap-10">
 // //               <div className="flex gap-10">
 // //                 <TicketCard
-// //                   title="E Summit'26 - Silver Pass"
+// //                   title="E Summit'27 - Silver Pass"
 // //                   info_div_classes="silver"
 // //                   features={[
 // //                     "Hospitality Kit",
@@ -423,7 +423,7 @@
 // //                   ]}
 // //                 />
 // //                 <TicketCard
-// //                   title="E Summit'26 - Gold Pass"
+// //                   title="E Summit'27 - Gold Pass"
 // //                   info_div_classes="gold"
 // //                   features={[
 // //                     "Hospitality Kit",
@@ -438,7 +438,7 @@
 
 // //               <div className="mx-auto">
 // //                 <TicketCard
-// //                   title="E Summit'26 - Diamond Pass"
+// //                   title="E Summit'27 - Diamond Pass"
 // //                   info_div_classes="diamond"
 // //                   features={[
 // //                     "Hospitality Kit",
@@ -457,7 +457,7 @@
 // //       </div>
 // //       {/* <div className="flex gap-6">
 // //         <TicketCard
-// //           title="E Summit'26 - Silver Pass"
+// //           title="E Summit'27 - Silver Pass"
 // //           info_div_classes="silver"
 // //           features={[
 // //             "Hospitality Kit",
@@ -469,7 +469,7 @@
 // //           ]}
 // //         />
 // //         <TicketCard
-// //           title="E Summit'26 - Diamond Pass"
+// //           title="E Summit'27 - Diamond Pass"
 // //           info_div_classes="diamond"
 // //           features={[
 // //             "Hospitality Kit",
@@ -481,7 +481,7 @@
 // //           ]}
 // //         />
 // //         <TicketCard
-// //           title="E Summit'26 - Gold Pass"
+// //           title="E Summit'27 - Gold Pass"
 // //           info_div_classes="gold"
 // //           features={[
 // //             "Hospitality Kit",
@@ -712,7 +712,7 @@
 //             <div className="flex flex-col mt-10 gap-10">
 //               <div className="flex gap-10">
 //                 <TicketCard
-//                   title="E Summit'26 - Silver Pass"
+//                   title="E Summit'27 - Silver Pass"
 //                   info_div_classes="silver"
 //                   features={[
 //                     "Hospitality Kit",
@@ -724,7 +724,7 @@
 //                   ]}
 //                 />
 //                 <TicketCard
-//                   title="E Summit'26 - Gold Pass"
+//                   title="E Summit'27 - Gold Pass"
 //                   info_div_classes="gold"
 //                   features={[
 //                     "Hospitality Kit",
@@ -739,7 +739,7 @@
 
 //               <div className="mx-auto">
 //                 <TicketCard
-//                   title="E Summit'26 - Diamond Pass"
+//                   title="E Summit'27 - Diamond Pass"
 //                   info_div_classes="diamond"
 //                   features={[
 //                     "Hospitality Kit",
@@ -758,7 +758,7 @@
 //       </div>
 //       {/* <div className="flex gap-6">
 //         <TicketCard
-//           title="E Summit'26 - Silver Pass"
+//           title="E Summit'27 - Silver Pass"
 //           info_div_classes="silver"
 //           features={[
 //             "Hospitality Kit",
@@ -770,7 +770,7 @@
 //           ]}
 //         />
 //         <TicketCard
-//           title="E Summit'26 - Diamond Pass"
+//           title="E Summit'27 - Diamond Pass"
 //           info_div_classes="diamond"
 //           features={[
 //             "Hospitality Kit",
@@ -782,7 +782,7 @@
 //           ]}
 //         />
 //         <TicketCard
-//           title="E Summit'26 - Gold Pass"
+//           title="E Summit'27 - Gold Pass"
 //           info_div_classes="gold"
 //           features={[
 //             "Hospitality Kit",

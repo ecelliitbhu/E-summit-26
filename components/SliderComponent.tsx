@@ -47,11 +47,11 @@ const ResponsiveComponent = () => {
   return (
     <section className="relative w-full py-20 px-4 flex justify-center items-center">
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-teal-900/20 blur-[100px] rounded-full -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#F86531]/10 blur-[100px] rounded-full -z-10" />
       
       {/* Additional decorative blur glows */}
-      <div className="absolute top-10 left-20 w-72 h-72 bg-[#23C0AD]/20 blur-[120px] -z-10" />
-      <div className="absolute bottom-10 right-20 w-72 h-72 bg-[#487AFA]/20 blur-[120px] -z-10" />
+      <div className="absolute top-10 left-20 w-72 h-72 bg-[#C42F35]/20 blur-[120px] -z-10" />
+      <div className="absolute bottom-10 right-20 w-72 h-72 bg-[#13324F]/20 blur-[120px] -z-10" />
 
       <motion.div
         initial={{ y: 50, opacity: 0 }}
@@ -67,7 +67,7 @@ const ResponsiveComponent = () => {
         "
       >
         {/* Decorative Top Gradient Line */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-teal-500/50 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#C42F35]/50 to-transparent" />
 
         <div className="text-center mb-8">
           <h2
@@ -75,7 +75,7 @@ const ResponsiveComponent = () => {
               text-3xl md:text-5xl font-extrabold tracking-tight mb-4
             "
             style={{
-              background: "linear-gradient(90deg, #F1E821, #23C0AD, #487AFA)",
+              background: "linear-gradient(90deg, #F86531, #C42F35, #13324F)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}

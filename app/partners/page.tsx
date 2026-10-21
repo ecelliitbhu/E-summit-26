@@ -31,8 +31,8 @@ import {
 export const metadata: Metadata = {
   referrer: "origin-when-cross-origin",
   title: {
-    default: "Partners | E-Summit'26 IIT BHU",
-    template: "%s | Partners | E-Summit'26 IIT BHU",
+    default: "Partners | E-Summit'27 IIT BHU",
+    template: "%s | Partners | E-Summit'27 IIT BHU",
   },
 };
 

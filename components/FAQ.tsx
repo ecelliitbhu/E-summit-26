@@ -12,7 +12,7 @@ const data = [
     idx: 1,
     question: "When and where is the event?",
     answer:
-      "The event is taking place from 30th Jan to 1st Feb 2026 in IIT(BHU) Varanasi. However, some of the events demand submissions prior to the main event taking place.",
+      "The event is taking place from 29th Jan to 31st Jan 2027 in IIT(BHU) Varanasi. However, some of the events demand submissions prior to the main event taking place.",
   },
   {
     idx: 2,
@@ -30,13 +30,13 @@ const data = [
     idx: 4,
     question: "Will there be any networking event in the Summit?",
     answer:
-      "Yes, the E-Summit 26 will host a special networking event that will engage all the investors on board with esteemed professionals, startups and participants.",
+      "Yes, the E-Summit 27 will host a special networking event that will engage all the investors on board with esteemed professionals, startups and participants.",
   },
   {
     idx: 5,
     question: "How can a startup participate in the Summit?",
     answer:
-      "Startups can become a part of the E-Summit 2026 through the Startup Expo - where they can set up their stalls for live demos of their product, and also through multiple events including the flagship event - The Million Dollar Pitch.",
+      "Startups can become a part of the E-Summit 2027 through the Startup Expo - where they can set up their stalls for live demos of their product, and also through multiple events including the flagship event - The Million Dollar Pitch.",
   },
   {
     idx: 6,
@@ -53,9 +53,9 @@ export default function FAQ() {
       {/* Header with gradient text */}
       <div className="text-center mb-12">
         <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white mb-4 tracking-tight">
-          Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500">Questions</span>
+          Frequently Asked <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F86531] to-[#13324F]">Questions</span>
         </h2>
-        <div className="h-1 w-20 bg-teal-500 mx-auto rounded-full"></div>
+        <div className="h-1 w-20 bg-[#C42F35] mx-auto rounded-full"></div>
       </div>
 
       <div className="w-full max-w-[850px] relative z-10">
@@ -71,19 +71,19 @@ export default function FAQ() {
                   bg-white/5 backdrop-blur-md border border-white/10
                   transition-all duration-300 ease-in-out
                   hover:bg-white/10 hover:border-white/20 hover:shadow-[0_0_20px_rgba(255,255,255,0.05)]
-                  data-[state=open]:bg-white/10 data-[state=open]:border-blue-500/30
+                  data-[state=open]:bg-white/10 data-[state=open]:border-[#F86531]/30
                 "
               >
                 <AccordionTrigger 
                   className="
                     px-6 py-4 text-left text-lg sm:text-xl md:text-2xl font-medium text-gray-100 
-                    hover:no-underline hover:text-cyan-400 transition-colors
-                    [&[data-state=open]]:text-cyan-400
+                    hover:no-underline hover:text-[#F86531] transition-colors
+                    [&[data-state=open]]:text-[#F86531]
                   "
                 >
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="px-6 pb-6 text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed font-light border-l-2 border-cyan-400  ml-6 pl-4">
+                <AccordionContent className="px-6 pb-6 text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed font-light border-l-2 border-[#F86531]  ml-6 pl-4">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

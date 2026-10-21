@@ -1,7 +1,7 @@
 .pass-card-wrapper {
   padding: 1px;
   border-radius: 20px;
-  background: linear-gradient(90deg, #487afa, #23c0ad, #f1e821);
+  background: linear-gradient(90deg, #F86531, #C42F35, #13324F);
 }
 
 .pass-card {
@@ -40,7 +40,7 @@
 .final-price {
   font-size: 32px;
   font-weight: bold;
-  color: #facc15;
+  color: #F86531;
 }
 
 /* Features */
@@ -68,7 +68,7 @@
 }
 
 .icon.available {
-  background-color: #facc15;
+  background-color: #F86531;
 }
 
 .icon.unavailable {

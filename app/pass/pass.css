@@ -4,7 +4,7 @@
   width: 100%;
   padding: 14px 52px;
   border-radius: 16px;
-  background: linear-gradient(90deg, #487afa, #23c0ad, #f1e821);
+  background: linear-gradient(90deg, #F86531, #C42F35, #13324F);
   color: #fff;
   font-weight: 600;
   border: none;
@@ -14,7 +14,7 @@
 
 .pass-button:hover {
   scale: 1.06;
-  background-color: #fde047;
+  background-color: #F86531;
   transition: all 0.5s;
 }
 

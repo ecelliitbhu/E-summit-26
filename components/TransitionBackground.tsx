@@ -42,14 +42,14 @@ export const TransitionBackground = () => {
         
         // More balanced color distribution - less yellow, more teal/purple
         const colors = [
-          '#487AFA', // Blue
-          '#487AFA', // Blue (weighted)
-          '#23C0AD', // Teal
-          '#23C0AD', // Teal (weighted)
-          '#9945FF', // Purple
-          '#9945FF', // Purple (weighted)
-          '#14F195', // Green
-          '#F1E821', // Yellow (only one instance)
+          '#F86531', // Orange
+          '#F86531', // Orange (weighted)
+          '#C42F35', // Red
+          '#C42F35', // Red (weighted)
+          '#13324F', // Navy
+          '#13324F', // Navy (weighted)
+          '#E85D45', // Coral
+          '#FF8C42', // Warm Orange
         ];
         this.color = colors[Math.floor(Math.random() * colors.length)];
       }
@@ -121,7 +121,7 @@ export const TransitionBackground = () => {
         this.phase = Math.random() * Math.PI * 2;
         this.opacity = Math.random() * 0.25 + 0.1;
         
-        const colors = ['#487AFA', '#23C0AD', '#9945FF', '#14F195'];
+        const colors = ['#F86531', '#C42F35', '#13324F', '#FF8C42'];
         this.color = colors[Math.floor(Math.random() * colors.length)];
       }
 
@@ -178,8 +178,8 @@ export const TransitionBackground = () => {
         canvas.height * 0.2,
         450
       );
-      glow1.addColorStop(0, 'rgba(35, 192, 173, 0.025)');
-      glow1.addColorStop(1, 'rgba(35, 192, 173, 0)');
+      glow1.addColorStop(0, 'rgba(248, 101, 49, 0.025)');
+      glow1.addColorStop(1, 'rgba(248, 101, 49, 0)');
       ctx.fillStyle = glow1;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -191,8 +191,8 @@ export const TransitionBackground = () => {
         canvas.height * 0.8,
         400
       );
-      glow2.addColorStop(0, 'rgba(153, 69, 255, 0.02)');
-      glow2.addColorStop(1, 'rgba(153, 69, 255, 0)');
+      glow2.addColorStop(0, 'rgba(196, 47, 53, 0.02)');
+      glow2.addColorStop(1, 'rgba(196, 47, 53, 0)');
       ctx.fillStyle = glow2;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
     };

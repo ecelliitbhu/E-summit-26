@@ -25,7 +25,7 @@ const Page: FunctionComponent<Props> = () => {
           "
         >
           <thead>
-            <tr className="bg-[#23C0AD] text-black font-bold text-xl">
+            <tr className="bg-[#C42F35] text-black font-bold text-xl">
               <th className="border-4 border-[#011854] p-6">Date</th>
               <th className="border-4 border-[#011854] p-6">
                 Time
@@ -49,9 +49,9 @@ const Page: FunctionComponent<Props> = () => {
           </thead>
 
           <tbody>
-            <tr className="bg-black/80 text-white hover:bg-[#23C0AD]/20 transition-all duration-300">
-              <td className="border-4 border-[#011854] p-6 text-[#F1E821] font-semibold">
-                29th Jan, 2026
+            <tr className="bg-black/80 text-white hover:bg-[#C42F35]/20 transition-all duration-300">
+              <td className="border-4 border-[#011854] p-6 text-[#F86531] font-semibold">
+                29th Jan, 2027
               </td>
               <td className="border-4 border-[#011854] p-6">
                 6:30 PM - 7:30 PM
@@ -63,12 +63,12 @@ const Page: FunctionComponent<Props> = () => {
               </td>
               <td className="border-4 border-[#011854] p-6">—</td>
             </tr>
-            <tr className="bg-black/80 text-white hover:bg-[#23C0AD]/20 transition-all duration-300">
+            <tr className="bg-black/80 text-white hover:bg-[#C42F35]/20 transition-all duration-300">
               <td
     rowSpan={3}
-    className="border-4 border-[#011854] p-6 text-[#F1E821] font-semibold"
+    className="border-4 border-[#011854] p-6 text-[#F86531] font-semibold"
   >
-    30th Jan, 2026
+    29th Jan, 2027
   </td>
 
   <td className="border-4 border-[#011854] p-6">
@@ -84,7 +84,7 @@ const Page: FunctionComponent<Props> = () => {
     rowSpan={3}
     className="border-4 border-[#011854] p-6"
   >
-    Inauguration Ceremony, E-Summit ’26
+    Inauguration Ceremony, E-Summit ’27
     <br />
     <br />
     Ashneer Grover - Fireside Session
@@ -121,9 +121,9 @@ const Page: FunctionComponent<Props> = () => {
               
 
 
-            {/* <tr className="bg-black/80 text-white hover:bg-[#23C0AD]/20 transition-all duration-300">
-              <td className="border-4 border-[#011854] p-6 text-[#F1E821] font-semibold">
-                31st Jan, 2026
+            {/* <tr className="bg-black/80 text-white hover:bg-[#C42F35]/20 transition-all duration-300">
+              <td className="border-4 border-[#011854] p-6 text-[#F86531] font-semibold">
+                30th Jan, 2027
               </td>
               <td className="border-4 border-[#011854] p-6">—</td>
               <td className="border-4 border-[#011854] p-6">—</td>
@@ -131,12 +131,12 @@ const Page: FunctionComponent<Props> = () => {
               <td className="border-4 border-[#011854] p-6">—</td>
             </tr> */}
             
-<tr className="bg-black/80 text-white hover:bg-[#23C0AD]/20 transition-all duration-300">
+<tr className="bg-black/80 text-white hover:bg-[#C42F35]/20 transition-all duration-300">
   <td
     rowSpan={12}
-    className="border-4 border-[#011854] p-6 text-[#F1E821] font-semibold"
+    className="border-4 border-[#011854] p-6 text-[#F86531] font-semibold"
   >
-    31st Jan, 2026
+    30th Jan, 2027
   </td>
 
   <td className="border-4 border-[#011854] p-6">
@@ -168,7 +168,7 @@ const Page: FunctionComponent<Props> = () => {
   </td>
 </tr>
 
-<tr className="bg-black/80 text-white hover:bg-[#23C0AD]/20 transition-all duration-300">
+<tr className="bg-black/80 text-white hover:bg-[#C42F35]/20 transition-all duration-300">
   <td className="border-4 border-[#011854] p-6">
     09:30 AM - 10:30 AM
   </td>
@@ -180,7 +180,7 @@ const Page: FunctionComponent<Props> = () => {
   </td>
 </tr>
 
-<tr className="bg-black/80 text-white hover:bg-[#23C0AD]/20 transition-all duration-300">
+<tr className="bg-black/80 text-white hover:bg-[#C42F35]/20 transition-all duration-300">
   <td className="border-4 border-[#011854] p-6">
     11:00 AM - 12:00 PM
   </td>
@@ -197,13 +197,13 @@ const Page: FunctionComponent<Props> = () => {
   </td>
 </tr>
 
-<tr className="bg-black/80 text-white hover:bg-[#23C0AD]/20 transition-all duration-300">
+<tr className="bg-black/80 text-white hover:bg-[#C42F35]/20 transition-all duration-300">
   <td className="border-4 border-[#011854] p-6">
     12:00 PM - 1:00 PM
   </td>
 </tr>
 
-<tr className="bg-black/80 text-white hover:bg-[#23C0AD]/20 transition-all duration-300">
+<tr className="bg-black/80 text-white hover:bg-[#C42F35]/20 transition-all duration-300">
   <td className="border-4 border-[#011854] p-6">
     1:00 PM - 1:30 PM
   </td>
@@ -216,7 +216,7 @@ const Page: FunctionComponent<Props> = () => {
   </td>
 </tr>
 
-<tr className="bg-black/80 text-white hover:bg-[#23C0AD]/20 transition-all duration-300">
+<tr className="bg-black/80 text-white hover:bg-[#C42F35]/20 transition-all duration-300">
   <td className="border-4 border-[#011854] p-6">
     1:30 PM - 2:30 PM
   </td>
@@ -230,7 +230,7 @@ const Page: FunctionComponent<Props> = () => {
   </td>
 </tr>
 
-<tr className="bg-black/80 text-white hover:bg-[#23C0AD]/20 transition-all duration-300">
+<tr className="bg-black/80 text-white hover:bg-[#C42F35]/20 transition-all duration-300">
   <td className="border-4 border-[#011854] p-6">
     2:00 PM - 3:00 PM
   </td>
@@ -251,7 +251,7 @@ const Page: FunctionComponent<Props> = () => {
   <td className="border-4 border-[#011854] p-6 bg-gray-400/60" />
 </tr>
 
-<tr className="bg-black/80 text-white hover:bg-[#23C0AD]/20 transition-all duration-300">
+<tr className="bg-black/80 text-white hover:bg-[#C42F35]/20 transition-all duration-300">
   <td className="border-4 border-[#011854] p-6">
     2:30 PM - 3:30 PM
   </td>
@@ -266,13 +266,13 @@ const Page: FunctionComponent<Props> = () => {
   </td>
 </tr>
 
-<tr className="bg-black/80 text-white hover:bg-[#23C0AD]/20 transition-all duration-300">
+<tr className="bg-black/80 text-white hover:bg-[#C42F35]/20 transition-all duration-300">
   <td className="border-4 border-[#011854] p-6">
     3:30 PM - 4:30 PM
   </td>
 </tr>
 
-<tr className="bg-black/80 text-white hover:bg-[#23C0AD]/20 transition-all duration-300">
+<tr className="bg-black/80 text-white hover:bg-[#C42F35]/20 transition-all duration-300">
   <td className="border-4 border-[#011854] p-6">
     4:30 PM - 5:00 PM
   </td>
@@ -288,7 +288,7 @@ const Page: FunctionComponent<Props> = () => {
   <td className="border-4 border-[#011854] p-6 bg-gray-400/60" />
 </tr>
 
-<tr className="bg-black/90 text-white font-semibold hover:bg-[#23C0AD]/20 transition-all duration-300">
+<tr className="bg-black/90 text-white font-semibold hover:bg-[#C42F35]/20 transition-all duration-300">
   <td className="border-4 border-[#011854] p-6">
     6:00 PM Onwards
   </td>
@@ -303,12 +303,12 @@ const Page: FunctionComponent<Props> = () => {
 
 
 
-<tr className="bg-black/80 text-white hover:bg-[#23C0AD]/20 transition-all duration-300">
+<tr className="bg-black/80 text-white hover:bg-[#C42F35]/20 transition-all duration-300">
   <td
     rowSpan={12}
-    className="border-4 border-[#011854] p-6 text-[#F1E821] font-semibold"
+    className="border-4 border-[#011854] p-6 text-[#F86531] font-semibold"
   >
-    1st Feb, 2026
+    31st Jan, 2027
   </td>
 
   <td className="border-4 border-[#011854] p-6">
@@ -342,13 +342,13 @@ const Page: FunctionComponent<Props> = () => {
   </td>
 </tr>
 
-<tr className="bg-black/80 text-white hover:bg-[#23C0AD]/20 transition-all duration-300">
+<tr className="bg-black/80 text-white hover:bg-[#C42F35]/20 transition-all duration-300">
   <td className="border-4 border-[#011854] p-6">
     10:00 AM - 11:00 AM
   </td>
 </tr>
 
-<tr className="bg-black/80 text-white hover:bg-[#23C0AD]/20 transition-all duration-300">
+<tr className="bg-black/80 text-white hover:bg-[#C42F35]/20 transition-all duration-300">
   <td className="border-4 border-[#011854] p-6">
     11:30 AM - 12:30 PM
   </td>
@@ -364,7 +364,7 @@ const Page: FunctionComponent<Props> = () => {
   </td>
 </tr>
 
-<tr className="bg-black/80 text-white hover:bg-[#23C0AD]/20 transition-all duration-300">
+<tr className="bg-black/80 text-white hover:bg-[#C42F35]/20 transition-all duration-300">
   <td className="border-4 border-[#011854] p-6">
     12:00 PM - 2:00 PM
   </td>
@@ -377,7 +377,7 @@ const Page: FunctionComponent<Props> = () => {
   </td>
 </tr>
 
-<tr className="bg-black/80 text-white hover:bg-[#23C0AD]/20 transition-all duration-300">
+<tr className="bg-black/80 text-white hover:bg-[#C42F35]/20 transition-all duration-300">
   <td className="border-4 border-[#011854] p-6">
     1:00 PM - 2:00 PM
   </td>
@@ -391,7 +391,7 @@ const Page: FunctionComponent<Props> = () => {
   </td>
 </tr>
 
-<tr className="bg-black/80 text-white hover:bg-[#23C0AD]/20 transition-all duration-300">
+<tr className="bg-black/80 text-white hover:bg-[#C42F35]/20 transition-all duration-300">
   <td className="border-4 border-[#011854] p-6">
     2:00 PM - 3:00 PM
   </td>
@@ -405,7 +405,7 @@ const Page: FunctionComponent<Props> = () => {
   </td>
 </tr>
 
-<tr className="bg-black/80 text-white hover:bg-[#23C0AD]/20 transition-all duration-300">
+<tr className="bg-black/80 text-white hover:bg-[#C42F35]/20 transition-all duration-300">
   <td className="border-4 border-[#011854] p-6">
     4:00 PM - 5:00 PM
   </td>
@@ -427,7 +427,7 @@ const Page: FunctionComponent<Props> = () => {
   </td>
 </tr>
 
-<tr className="bg-black/80 text-white hover:bg-[#23C0AD]/20 transition-all duration-300">
+<tr className="bg-black/80 text-white hover:bg-[#C42F35]/20 transition-all duration-300">
   <td className="border-4 border-[#011854] p-6">
     5:00 PM - 6:00 PM
   </td>
@@ -441,7 +441,7 @@ const Page: FunctionComponent<Props> = () => {
   </td>
 </tr>
 
-<tr className="bg-black/80 text-white hover:bg-[#23C0AD]/20 transition-all duration-300">
+<tr className="bg-black/80 text-white hover:bg-[#C42F35]/20 transition-all duration-300">
   <td className="border-4 border-[#011854] p-6">
     6:00 PM - 7:00 PM
   </td>
@@ -455,7 +455,7 @@ const Page: FunctionComponent<Props> = () => {
   </td>
 </tr>
 
-<tr className="bg-black/90 text-white font-semibold hover:bg-[#23C0AD]/20 transition-all duration-300">
+<tr className="bg-black/90 text-white font-semibold hover:bg-[#C42F35]/20 transition-all duration-300">
   <td className="border-4 border-[#011854] p-6">
     7:00 PM - 8:00 PM
   </td>
@@ -464,13 +464,13 @@ const Page: FunctionComponent<Props> = () => {
     colSpan={2}
     className="border-4 border-[#011854] p-6"
   >
-    Closing Ceremony – E-Summit ’26
+    Closing Ceremony – E-Summit ’27
     <br />
     <span className="font-semibold">SB</span>
   </td>
 </tr>
 
-<tr className="bg-black/90 text-white font-semibold hover:bg-[#23C0AD]/20 transition-all duration-300">
+<tr className="bg-black/90 text-white font-semibold hover:bg-[#C42F35]/20 transition-all duration-300">
   <td className="border-4 border-[#011854] p-6">
     8:00 PM Onwards
   </td>

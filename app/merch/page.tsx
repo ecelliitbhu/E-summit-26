@@ -22,7 +22,7 @@ export default function CardWithForm() {
           <p
             className="font-bold text-3xl sm:text-6xl md:text-12xl inline-block"
             style={{
-              background: "linear-gradient(180deg, #F1E821, #23C0AD,#487AFA )",
+              background: "linear-gradient(180deg, #F86531, #C42F35, #13324F)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
@@ -34,7 +34,7 @@ export default function CardWithForm() {
         <hr />
 
         <p className="text-white text-xl font-semibold mt-12 mb-6">
-          Official E-Summit ’26 Merchandise
+          Official E-Summit ’27 Merchandise
         </p>
 
         <div className="flex justify-center mb-24">
@@ -44,7 +44,7 @@ export default function CardWithForm() {
                 <Image
                   unoptimized
                   src="/images/merch.jpeg"
-                  alt="E-Summit 26 Official Merchandise"
+                  alt="E-Summit 27 Official Merchandise"
                   width={1600}
                   height={800}
                   className="w-full max-w-[1200px] h-auto object-contain"
@@ -103,7 +103,7 @@ export default function CardWithForm() {
             className="mt-6 text-sm sm:text-base md:text-lg lg:text-xl px-6 py-3 font-semibold"
             variant={"default"}
             style={{
-              background: "linear-gradient(120deg, #F1E821, #23C0AD,#487AFA )",
+              background: "linear-gradient(120deg, #F86531, #C42F35, #13324F)",
               color: "white",
               border: "none",
               padding: "0.5rem 1.5rem",

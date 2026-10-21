@@ -5,7 +5,7 @@ import { ChevronDown } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
-// Yellow: #F1E821 | Teal: #23C0AD | Blue: #487AFA
+// Yellow: #F86531 | Teal: #C42F35 | Blue: #13324F
 
 const NavigationMenu = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>,
@@ -42,8 +42,8 @@ NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName
 const NavigationMenuItem = NavigationMenuPrimitive.Item
 const navigationMenuTriggerStyle = cva(
   "group inline-flex h-10 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-all duration-200 " +
-    "bg-[#23C0AD] text-white hover:bg-[#1CA18E] focus:bg-[#1CA18E] focus:ring-2 focus:ring-[#487AFA] focus:outline-none " +
-    "data-[active]:bg-[#F1E821] data-[state=open]:bg-[#F1E821] data-[state=open]:text-black"
+    "bg-[#C42F35] text-white hover:bg-[#A3262B] focus:bg-[#A3262B] focus:ring-2 focus:ring-[#13324F] focus:outline-none " +
+    "data-[active]:bg-[#F86531] data-[state=open]:bg-[#F86531] data-[state=open]:text-black"
 )
 
 const NavigationMenuTrigger = React.forwardRef<
@@ -71,7 +71,7 @@ const NavigationMenuContent = React.forwardRef<
   <NavigationMenuPrimitive.Content
     ref={ref}
     className={cn(
-      "left-0 top-0 w-full rounded-md border border-[#23C0AD]/30 bg-white text-[#0F172A] shadow-xl " +
+      "left-0 top-0 w-full rounded-md border border-[#C42F35]/30 bg-white text-[#0F172A] shadow-xl " +
         "data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out " +
         "data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out " +
         "data-[motion=from-end]:slide-in-from-right-52 " +
@@ -95,7 +95,7 @@ const NavigationMenuViewport = React.forwardRef<
     <NavigationMenuPrimitive.Viewport
       className={cn(
         "origin-top-center relative mt-1.5 h-[var(--radix-navigation-menu-viewport-height)] " +
-          "w-full overflow-hidden rounded-lg border border-[#23C0AD]/30 bg-white shadow-[0_4px_20px_rgba(72,122,250,0.15)] " +
+          "w-full overflow-hidden rounded-lg border border-[#C42F35]/30 bg-white shadow-[0_4px_20px_rgba(248,101,49,0.15)] " +
           "data-[state=open]:animate-in data-[state=closed]:animate-out " +
           "data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-90 md:w-[var(--radix-navigation-menu-viewport-width)]",
         className
@@ -121,7 +121,7 @@ const NavigationMenuIndicator = React.forwardRef<
     )}
     {...props}
   >
-    <div className="relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-[#487AFA] shadow-md" />
+    <div className="relative top-[60%] h-2 w-2 rotate-45 rounded-tl-sm bg-[#13324F] shadow-md" />
   </NavigationMenuPrimitive.Indicator>
 ))
 NavigationMenuIndicator.displayName =

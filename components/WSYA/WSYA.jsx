@@ -60,7 +60,7 @@
 //       <div className="text-center">
 //         <h1 className="text-4xl font-bold mb-2">Why should You{" "}  <span
 //     style={{
-//       background: "linear-gradient(90deg, #487AFA, #23C0AD, #F1E821)",
+//       background: "linear-gradient(90deg, #F86531, #C42F35, #13324F)",
 //       WebkitBackgroundClip: "text",
 //       WebkitTextFillColor: "transparent",
 //     }}
@@ -117,7 +117,7 @@ const MotionDiv = ({ src, width, height, alt, text }) => (
         flex items-center justify-center
         group-hover:bg-white/15
         group-hover:border-white/30
-        group-hover:shadow-[0_12px_40px_0_rgba(72,122,250,0.3)]
+        group-hover:shadow-[0_12px_40px_0_rgba(248,101,49,0.3)]
         transition-all duration-500
       ">
         {/* Image inside circle */}
@@ -179,7 +179,7 @@ const WSYA = () => {
           Why should You{" "}
           <span
             style={{
-              background: "linear-gradient(90deg, #487AFA, #23C0AD, #F1E821)",
+              background: "linear-gradient(90deg, #F86531, #C42F35, #13324F)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}

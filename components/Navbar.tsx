@@ -6,7 +6,7 @@ import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
-import logo from "@/public/logos/esummit26.png";
+import logo from "@/public/logos/esummit27.png";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -44,7 +44,7 @@ const Navbar: FunctionComponent = () => {
     };
     const closeMobileMenu = () => setIsMobileMenuOpen(false);
     const gradientButtonStyle = {
-        background: "linear-gradient(90deg,#F1E821,#23C0AD,#487AFA)",
+        background: "linear-gradient(90deg,#F86531,#C42F35,#13324F)",
     };
     return (
         <>
@@ -95,7 +95,7 @@ const Navbar: FunctionComponent = () => {
                     transition-colors
                   `}
                 >
-                  E‑Summit 26
+                  E‑Summit 27
                 </span> */}
                             </Link>
                             {/* ========== DESKTOP NAV (APPLE‑LIKE) ========== */}
@@ -169,7 +169,7 @@ const Navbar: FunctionComponent = () => {
                       px-4 py-1.5 h-auto
                       transition-transform duration-200
                       hover:scale-[1.04]
-                      shadow-[0_0_18px_rgba(35,192,173,0.65)]
+                      shadow-[0_0_18px_rgba(248,101,49,0.65)]
                     "
                                         style={gradientButtonStyle}
                                     >
@@ -235,7 +235,7 @@ const Navbar: FunctionComponent = () => {
                     {/* Title row inside sheet, like Apple “Store” label */}
                     <div className="mb-6 flex items-center justify-between">
                         <span className="text-xl uppercase tracking-[0.18em] text-white/50">Menu</span>
-                        <span className="text-[20px] text-white/40">E‑Summit 26</span>
+                        <span className="text-[20px] text-white/40">E‑Summit 27</span>
                     </div>
 
                     <nav className="space-y-6">
@@ -256,7 +256,7 @@ const Navbar: FunctionComponent = () => {
                                         >
                                             <span className={isActive ? "text-white" : "text-white/80"}>{item.name}</span>
                                             {/* tiny gradient pill accent */}
-                                            <span className="h-[2px] w-8 rounded-full bg-gradient-to-r from-[#F1E821] via-[#23C0AD] to-[#487AFA] opacity-70" />
+                                            <span className="h-[2px] w-8 rounded-full bg-gradient-to-r from-[#F86531] via-[#C42F35] to-[#13324F] opacity-70" />
                                         </Link>
                                     </li>
                                 );
@@ -294,7 +294,7 @@ const Navbar: FunctionComponent = () => {
                     py-2.5 text-[14px]
                     transition-transform duration-200
                     hover:scale-[1.02]
-                    shadow-[0_0_18px_rgba(35,192,173,0.65)]
+                    shadow-[0_0_18px_rgba(248,101,49,0.65)]
                   "
                                     style={gradientButtonStyle}
                                 >

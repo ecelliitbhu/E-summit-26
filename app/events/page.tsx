@@ -12,8 +12,8 @@ import { Poppins } from "next/font/google";
 export const metadata: Metadata = {
   referrer: "origin-when-cross-origin",
   title: {
-    default: "Events | E-Summit'26 IIT BHU",
-    template: "%s | Events | E-Summit'26 IIT BHU",
+    default: "Events | E-Summit'27 IIT BHU",
+    template: "%s | Events | E-Summit'27 IIT BHU",
   },
 };
 interface OwnProps {}
@@ -23,7 +23,7 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
 });
 const gradientTextStyle = {
-  background: "linear-gradient(90deg, #3bb7d3ff, #23C0AD, #487AFA)",
+  background: "linear-gradient(90deg, #F86531, #C42F35, #13324F)",
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
 };

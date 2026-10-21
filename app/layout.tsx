@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ClientLayout } from "./client-layout";
 
 export const metadata: Metadata = {
-  title: "IIT BHU Varanasi: E-Summit'26",
+  title: "IIT BHU Varanasi: E-Summit'27",
   description: "E-Summit is a high-energy celebration where innovation, entrepreneurship, and bold idea converge to shape the future, brought to you by the Entrepreneurship cell IIT BHU",
   
   icons: {
@@ -19,16 +19,16 @@ export const metadata: Metadata = {
   },
   
   openGraph: {
-    title: "IIT BHU Varanasi: E-Summit'26",
+    title: "IIT BHU Varanasi: E-Summit'27",
     description: "E-Summit is a high-energy celebration where innovation, entrepreneurship, and bold idea converge to shape the future, brought to you by the Entrepreneurship cell IIT BHU",
-    url: "https://esummit.ecelliitbhu.com",
+    url: "https://esummit.ecelliitbhu.in",
     siteName: "E-Cell IIT BHU",
     images: [
       {
         url: "/logos/ecell-search-logo-blackbg.jpeg", 
         width: 1200,
         height: 630,
-        alt: "E-Summit 26 Logo",
+        alt: "E-Summit 27 Logo",
       },
     ],
     locale: "en_US",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   
   twitter: {
     card: "summary_large_image",
-    title: "IIT BHU Varanasi: E-Summit'26",
+    title: "IIT BHU Varanasi: E-Summit'27",
     description: "E-Summit is a high-energy celebration where innovation, entrepreneurship, and bold idea converge to shape the future, brought to you by the Entrepreneurship cell IIT BHU",
     images: ["/logos/ecell-search-logo-blackbg.jpeg"], 
   },

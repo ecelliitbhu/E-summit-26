@@ -39,7 +39,7 @@ const Contact: FunctionComponent = () => {
         <p
           className="font-bold text-3xl sm:text-4xl md:text-5xl inline-block"
           style={{
-            background: "linear-gradient(180deg, #F1E821, #23C0AD,#487AFA )",
+            background: "linear-gradient(180deg, #F86531, #C42F35, #13324F)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
@@ -166,7 +166,7 @@ const Contact: FunctionComponent = () => {
             />
 
             <Button
-              className="w-full bg-[#23C0AD] hover:bg-[#1d9e8f] text-base sm:text-lg md:text-xl font-semibold py-6"
+              className="w-full bg-[#C42F35] hover:bg-[#A3262B] text-base sm:text-lg md:text-xl font-semibold py-6"
               type="submit"
             >
               Submit
@@ -181,7 +181,7 @@ const Contact: FunctionComponent = () => {
         <p
           className="font-bold text-xl sm:text-2xl md:text-3xl inline-block"
           style={{
-            background: "linear-gradient(90deg, #F1E821, #23C0AD,#487AFA )",
+            background: "linear-gradient(90deg, #F86531, #C42F35, #13324F)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}

@@ -16,8 +16,8 @@ import { Poppins } from "next/font/google";
 export const metadata: Metadata = {
   referrer: "origin-when-cross-origin",
   title: {
-    default: "Startup-Expo | E-Summit'26 IIT BHU",
-    template: "%s | Startup-Expo | E-Summit'26 IIT BHU",
+    default: "Startup-Expo | E-Summit'27 IIT BHU",
+    template: "%s | Startup-Expo | E-Summit'27 IIT BHU",
   },
 };
 interface OwnProps {}
@@ -27,7 +27,7 @@ const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
 });
 const gradientTextStyle = {
-  background: "linear-gradient(90deg, #3bb7d3ff, #23C0AD, #487AFA)",
+  background: "linear-gradient(90deg, #F86531, #C42F35, #13324F)",
   WebkitBackgroundClip: "text",
   WebkitTextFillColor: "transparent",
 };
@@ -38,8 +38,8 @@ const page: FunctionComponent<Props> = () => {
       <section className={`pt-28 min-h-screen ${poppins.className}`}>
         <div className="max-w-6xl mx-auto text-center px-6">
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight">
-            <span className="bg-gradient-to-r from-[#3bb7d3] via-[#23C0AD] to-[#487AFA] bg-clip-text text-transparent">
-              Startup Expo 2026
+            <span className="bg-gradient-to-r from-[#F86531] via-[#C42F35] to-[#13324F] bg-clip-text text-transparent">
+              Startup Expo 2027
             </span>
           </h1>
 
@@ -56,8 +56,8 @@ const page: FunctionComponent<Props> = () => {
             <p>• High-Impact Networking Opportunities</p>
           </div>
 
-          <p className="mt-8 text-base md:text-lg font-semibold uppercase tracking-wide text-[#F1E821]">
-            30th Jan – 1st Feb · IIT BHU, Varanasi
+          <p className="mt-8 text-base md:text-lg font-semibold uppercase tracking-wide text-[#F86531]">
+            29th Jan – 31st Jan · IIT BHU, Varanasi
           </p>
         </div>
 
@@ -115,10 +115,10 @@ const page: FunctionComponent<Props> = () => {
             asChild
             className="
               px-12 py-4 text-lg font-bold text-black
-              bg-gradient-to-r from-[#F1E821] via-[#23C0AD] to-[#487AFA]
+              bg-gradient-to-r from-[#F86531] via-[#C42F35] to-[#13324F]
               hover:scale-[1.05]
               transition-all duration-200
-              shadow-[0_0_30px_rgba(35,192,173,0.6)]
+              shadow-[0_0_30px_rgba(248,101,49,0.6)]
             "
           >
             <Link href="/payment?type=startup-expo">
