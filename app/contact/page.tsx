@@ -6,8 +6,8 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   referrer: "origin-when-cross-origin",
   title: {
-    default: "Contact | E-Summit'26 IIT BHU",
-    template: "%s | Contact | E-Summit'26 IIT BHU",
+    default: "Contact | E-Summit'27 IIT BHU",
+    template: "%s | Contact | E-Summit'27 IIT BHU",
   },
 };
 

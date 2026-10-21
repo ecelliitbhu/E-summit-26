@@ -206,7 +206,7 @@ const Itinerary: () => JSX.Element = () => {
     <>
       <h2 className="text-center font-bold text-2xl"> The Schedule </h2>
       <p className="text-center text-base font-semibold mt-2">
-        February 2nd, 3rd, & 4th 2024
+        January 29th, 30th, & 31st 2027
       </p>
       <p className="text-center mt-2">
         <Badge variant="outline">Central Standard Time (GMT-6)</Badge>
@@ -214,9 +214,9 @@ const Itinerary: () => JSX.Element = () => {
       <div className="flex justify-center my-4 mx-14">
         <Tabs defaultValue="second" className="">
           <TabsList className="grid w-full grid-cols-3">
-            <TabsTrigger value="second">2 Feb 2024</TabsTrigger>
-            <TabsTrigger value="third">3 Feb 2024</TabsTrigger>
-            <TabsTrigger value="fourth">4 Feb 2024</TabsTrigger>
+            <TabsTrigger value="second">29 Jan 2027</TabsTrigger>
+            <TabsTrigger value="third">30 Jan 2027</TabsTrigger>
+            <TabsTrigger value="fourth">31 Jan 2027</TabsTrigger>
           </TabsList>
           <TabsContent value="second">
             <div className="grid  grid-cols-3 gap-2">

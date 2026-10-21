@@ -23,24 +23,24 @@ const page: FunctionComponent<Props> = () => {
                 {/* ================= HERO ================= */}
                 <div className="max-w-6xl mx-auto text-center px-6">
                     <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight">
-                        <span className="bg-gradient-to-r from-[#487AFA] via-[#23C0AD] to-[#F1E821] bg-clip-text text-transparent">Join Million Dollar Pitch</span>
+                        <span className="bg-gradient-to-r from-[#F86531] via-[#C42F35] to-[#13324F] bg-clip-text text-transparent">Join Million Dollar Pitch</span>
                     </h1>
                     <div className="mt-10 space-y-4 text-lg md:text-xl font-medium text-white/80">
                         <p>• Network with VCs, Angels & Founders</p>
                         <p>• Featuring Shark Tank Founders</p>
                         <p>• Exclusive Networking Dinner at Ganga Ghats</p>
                     </div>
-                    <p className="mt-8 text-base md:text-lg font-semibold uppercase tracking-wide text-[#F1E821]">31st Jan – 1st Feb · IIT BHU, Varanasi</p>
+                    <p className="mt-8 text-base md:text-lg font-semibold uppercase tracking-wide text-[#F86531]">29th Jan – 31st Jan · IIT BHU, Varanasi</p>
                 </div>
                 <div className="mt-28 mb-24 flex justify-center">
                     <Button
                         asChild
                         className="
                             px-12 py-4 text-lg font-bold text-black
-                            bg-gradient-to-r from-[#F1E821] via-[#23C0AD] to-[#487AFA]
+                            bg-gradient-to-r from-[#F86531] via-[#C42F35] to-[#13324F]
                             hover:scale-[1.05]
                             transition-all duration-200
-                            shadow-[0_0_30px_rgba(35,192,173,0.6)]
+                            shadow-[0_0_30px_rgba(248,101,49,0.6)]
                         "
                     >
                         <Link href="https://unstop.com/competitions/million-dollar-pitch-e-summit26-iit-bhu-varanasi-iit-bhu-1603797">

@@ -68,7 +68,7 @@ const MarqueeComponentSsp = () => {
       <h2 className="text-center text-4xl md:text-6xl font-bold text-white mb-10">
         <span
           style={{
-            background: "linear-gradient(90deg, #487AFA, #23C0AD, #F1E821)",
+            background: "linear-gradient(90deg, #F86531, #C42F35, #13324F)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}

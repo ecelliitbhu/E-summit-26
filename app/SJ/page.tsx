@@ -16,10 +16,10 @@ export default function SJPage() {
       <section className="text-center py-20 px-4">
         <div className="max-w-4xl mx-auto flex flex-col items-center gap-10">
           <div className="w-full">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-[#487AFA]">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 text-[#13324F]">
               Startup Junction 2025
             </h1>
-            <p className="text-xl md:text-2xl text-[#23C0AD] mb-6 italic">
+            <p className="text-xl md:text-2xl text-[#C42F35] mb-6 italic">
               Where Ambition Meets Investment
             </p>
             <p className="text-lg md:text-xl max-w-2xl mx-auto mb-4 text-gray-300">
@@ -28,7 +28,7 @@ export default function SJPage() {
             </p>
             <p className="text-lg font-medium mb-6 text-gray-200">
               Date:{" "}
-              <span className="text-[#F1E821] font-semibold">December 6, 2025</span>
+              <span className="text-[#F86531] font-semibold">December 6, 2025</span>
             </p>
 
         
@@ -36,7 +36,7 @@ export default function SJPage() {
 
               <Button
                 asChild
-                className="px-8 py-3 text-lg font-semibold text-black bg-gradient-to-r from-[#F1E821] via-[#23C0AD] to-[#487AFA] hover:opacity-90 transition-all duration-200"
+                className="px-8 py-3 text-lg font-semibold text-black bg-gradient-to-r from-[#F86531] via-[#C42F35] to-[#13324F] hover:opacity-90 transition-all duration-200"
               >
                 <Link href={"/payment?type=startup_junction"}>Register Now</Link>
               </Button>
@@ -69,7 +69,7 @@ export default function SJPage() {
         </div>
       </section>
       <section className="py-16 px-6 md:px-20">
-        <h2 className="text-3xl font-bold text-center mb-8 text-[#487AFA]">
+        <h2 className="text-3xl font-bold text-center mb-8 text-[#13324F]">
           About Startup Junction
         </h2>
         <p className="max-w-3xl mx-auto text-center text-gray-300 mb-8">
@@ -84,9 +84,9 @@ export default function SJPage() {
             { title: "10+ VC Firms", desc: "From leading venture ecosystems" },
             { title: "3 Cities", desc: "Bangalore • Delhi • Ahmedabad" },
           ].map((item, i) => (
-            <Card key={i} className="border-[#23C0AD]/30 bg-[#121212] shadow-md overflow-hidden">
+            <Card key={i} className="border-[#C42F35]/30 bg-[#121212] shadow-md overflow-hidden">
               <CardContent className="text-center py-10">
-                <h3 className="text-2xl font-semibold mb-2 text-[#23C0AD]">
+                <h3 className="text-2xl font-semibold mb-2 text-[#C42F35]">
                   {item.title}
                 </h3>
                 <p className="text-gray-300">{item.desc}</p>
@@ -96,7 +96,7 @@ export default function SJPage() {
         </div>
       </section>
       <section className="py-16 px-6 md:px-20">
-        <h2 className="text-3xl font-bold text-center mb-8 text-[#487AFA]">
+        <h2 className="text-3xl font-bold text-center mb-8 text-[#13324F]">
           The Startup Junction Experience
         </h2>
         <div className="max-w-5xl mx-auto space-y-6 text-gray-300 text-lg leading-relaxed">
@@ -110,13 +110,13 @@ export default function SJPage() {
         </div>
       </section>
       <section className="py-16 px-6 md:px-20">
-        <h2 className="text-3xl font-bold text-center mb-8 text-[#487AFA]">
+        <h2 className="text-3xl font-bold text-center mb-8 text-[#13324F]">
           Why Participate?
         </h2>
 
         <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
           <div>
-            <h3 className="text-2xl font-semibold mb-3 text-[#23C0AD]">For Startups</h3>
+            <h3 className="text-2xl font-semibold mb-3 text-[#C42F35]">For Startups</h3>
             <ul className="list-disc pl-6 space-y-2 text-gray-300">
               <li>Pitch directly to active venture capitalists</li>
               <li>Get real-time feedback and mentorship</li>
@@ -126,7 +126,7 @@ export default function SJPage() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-semibold mb-3 text-[#F1E821]">For Investors</h3>
+            <h3 className="text-2xl font-semibold mb-3 text-[#F86531]">For Investors</h3>
             <ul className="list-disc pl-6 space-y-2 text-gray-300">
               <li>Discover early-stage ventures</li>
               <li>Explore curated pitch sessions</li>
@@ -137,7 +137,7 @@ export default function SJPage() {
         </div>
       </section>
       <section className="py-16 px-6 md:px-20 text-center">
-        <h2 className="text-3xl font-bold mb-8 text-[#487AFA]">
+        <h2 className="text-3xl font-bold mb-8 text-[#13324F]">
           Legacy of Excellence — Powered by E-Cell, IIT BHU
         </h2>
 

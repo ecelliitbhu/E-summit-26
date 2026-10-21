@@ -22,7 +22,7 @@ const About = () => {
       id="about"
     >
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-blue-900/20 blur-[100px] rounded-full -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#13324F]/30 blur-[100px] rounded-full -z-10" />
 
       <motion.div
         initial={{ y: 50, opacity: 0 }}
@@ -39,7 +39,7 @@ const About = () => {
         "
       >
         {/* Decorative Top Gradient Line */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#C42F35]/50 to-transparent" />
 
         <div className="text-center space-y-8">
           <h3
@@ -51,12 +51,12 @@ const About = () => {
     font-extrabold 
     tracking-tight"
             style={{
-              background: "linear-gradient(90deg, #487AFA, #23C0AD, #F1E821)",
+              background: "linear-gradient(90deg, #F86531, #C42F35, #13324F)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
           >
-            ABOUT E-SUMMIT&apos;26
+            ABOUT E-SUMMIT&apos;27
           </h3>
 
           <div className="space-y-6 text-gray-200 leading-relaxed font-light">
@@ -104,7 +104,7 @@ const About = () => {
 ">
 
               
-              <span className="text-yellow-400 font-normal">
+              <span className="text-[#F86531] font-normal">
                 &quot;The drive to create, innovate and transform the future.&quot;
               </span>
             </p>

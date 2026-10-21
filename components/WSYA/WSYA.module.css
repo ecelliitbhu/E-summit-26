@@ -14,7 +14,7 @@
     font-weight: 700;
     margin-bottom: 0.5rem;
     background-clip: text;
-    background: radial-gradient(ellipse at left, #38a169, #4299e1, #9f7aea);
+    background: linear-gradient(90deg, #F86531, #C42F35, #13324F);
     -webkit-background-clip: text;
     color: transparent;
 }

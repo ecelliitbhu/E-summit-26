@@ -40,7 +40,7 @@ export const AnimatedBackground = () => {
         this.speedY = (Math.random() - 0.5) * 0.3;
         this.opacity = Math.random() * 0.15 + 0.05;
         
-        const colors = ['#487AFA', '#23C0AD', '#F1E821', '#9945FF', '#14F195'];
+        const colors = ['#F86531', '#C42F35', '#13324F', '#FF8C42', '#E85D45'];
         this.color = colors[Math.floor(Math.random() * colors.length)];
         
         const shapes: Array<'circle' | 'square' | 'triangle'> = ['circle', 'square', 'triangle'];
@@ -116,7 +116,7 @@ export const AnimatedBackground = () => {
 
           if (distance < 200) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(72, 122, 250, ${0.08 * (1 - distance / 200)})`;
+            ctx.strokeStyle = `rgba(248, 101, 49, ${0.08 * (1 - distance / 200)})`;
             ctx.lineWidth = 0.5;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
@@ -139,8 +139,8 @@ export const AnimatedBackground = () => {
         canvas.height * 0.3,
         300
       );
-      gradient1.addColorStop(0, 'rgba(72, 122, 250, 0.08)');
-      gradient1.addColorStop(1, 'rgba(72, 122, 250, 0)');
+      gradient1.addColorStop(0, 'rgba(248, 101, 49, 0.08)');
+      gradient1.addColorStop(1, 'rgba(248, 101, 49, 0)');
       ctx.fillStyle = gradient1;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -153,8 +153,8 @@ export const AnimatedBackground = () => {
         canvas.height * 0.7,
         250
       );
-      gradient2.addColorStop(0, 'rgba(153, 69, 255, 0.06)');
-      gradient2.addColorStop(1, 'rgba(153, 69, 255, 0)');
+      gradient2.addColorStop(0, 'rgba(19, 50, 79, 0.12)');
+      gradient2.addColorStop(1, 'rgba(19, 50, 79, 0)');
       ctx.fillStyle = gradient2;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -167,8 +167,8 @@ export const AnimatedBackground = () => {
         canvas.height * 0.5,
         200
       );
-      gradient3.addColorStop(0, 'rgba(35, 192, 173, 0.05)');
-      gradient3.addColorStop(1, 'rgba(35, 192, 173, 0)');
+      gradient3.addColorStop(0, 'rgba(248, 101, 49, 0.06)');
+      gradient3.addColorStop(1, 'rgba(248, 101, 49, 0)');
       ctx.fillStyle = gradient3;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
     };

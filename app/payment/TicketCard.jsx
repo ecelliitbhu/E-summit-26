@@ -6,7 +6,7 @@ export default function TicketCard({ title, features, info_div_classes }) {
     <div className="inline-block">
       <div className="flex border-2 items-stretch border-black">
         <img
-          src="/Esummit26logo.png"
+          src="/Esummit27logo.png"
           alt="e-summit-logo"
           height={150}
           width={170}

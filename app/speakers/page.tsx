@@ -9,8 +9,8 @@ import InteractiveBackground from "@/components/InteractiveBackground";
 export const metadata: Metadata = {
   referrer: "origin-when-cross-origin",
   title: {
-    default: "Speakers | E-Summit'26 IIT BHU",
-    template: "%s | Speakers | E-Summit'26 IIT BHU",
+    default: "Speakers | E-Summit'27 IIT BHU",
+    template: "%s | Speakers | E-Summit'27 IIT BHU",
   },
 };
 const SpeakerSection = ({
@@ -66,7 +66,7 @@ const page: FunctionComponent<Props> = () => {
             <h1
             className="font-bold text-5xl sm:text-5xl md:text-5xl inline-block pt-20 pb-14"
             style={{
-              background: "linear-gradient(180deg, #F1E821, #23C0AD,#487AFA )",
+              background: "linear-gradient(180deg, #F86531, #C42F35, #13324F)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}

@@ -1,7 +1,7 @@
 "use client";
 import React, { FunctionComponent, useState, useEffect } from "react";
 import Image from "next/image";
-import Logo from "@/public/logos/esummit26.png";
+import Logo from "@/public/logos/esummit27.png";
 import Res from "@/public/reg.png";
 import Particle from "@/components/particle";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -54,7 +54,7 @@ const Hero: FunctionComponent = () => {
 </div> */}
 
       {/* Ambient Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[120px] -z-10 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#C42F35]/10 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
       {/* <ScrollTicket /> */}
 
@@ -73,7 +73,7 @@ const Hero: FunctionComponent = () => {
         <h2
           className="text-xl md:text-2xl font-mono tracking-widest uppercase"
           style={{
-            background: "linear-gradient(90deg, #487AFA, #23C0AD, #F1E821)",
+            background: "linear-gradient(90deg, #F86531, #C42F35, #13324F)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
           }}
@@ -83,13 +83,13 @@ const Hero: FunctionComponent = () => {
 
         {/* Logo with Glow Effect */}
         <div className="relative group">
-          <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+          <div className="absolute -inset-4 bg-gradient-to-r from-[#F86531] to-[#13324F] rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition duration-1000"></div>
           <Image
             unoptimized
             src={Logo}
             width={isSmallScreen ? 320 : 480}
             height={isSmallScreen ? 320 : 480}
-            alt="E-Summit'26 Logo"
+            alt="E-Summit'27 Logo"
             className="relative z-10 drop-shadow-2xl transition-transform duration-500 hover:scale-105"
           />
         </div>
@@ -123,9 +123,9 @@ const Hero: FunctionComponent = () => {
               <button
                 className="
                   group w-full sm:w-[280px] 
-                  bg-gradient-to-r from-[#487AFA] via-[#23C0AD] to-[#F1E821]
+                  bg-gradient-to-r from-[#F86531] via-[#C42F35] to-[#13324F]
                   text-white px-8 py-4 rounded-full flex items-center justify-between gap-4 font-bold
-                  transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(72,122,250,0.6)]
+                  transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(248,101,49,0.6)]
                   relative overflow-hidden
                 "
               >
@@ -136,7 +136,7 @@ const Hero: FunctionComponent = () => {
                 
                 {/* White Circle with Arrow - FIXED */}
                 <div className="relative z-10 w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                  <FaArrowRight className="text-[#487AFA] text-sm" />
+                  <FaArrowRight className="text-[#F86531] text-sm" />
                 </div>
               </button>
             </Link>
@@ -152,19 +152,19 @@ const Hero: FunctionComponent = () => {
               <button
                 className="
                   group w-full sm:w-[280px]
-                  bg-transparent border-2 border-[#23C0AD]
+                  bg-transparent border-2 border-[#C42F35]
                   text-white px-8 py-4 rounded-full flex items-center justify-between gap-4 font-bold
-                  transition-all duration-300 hover:scale-105 hover:bg-[#23C0AD]/10 hover:shadow-[0_0_30px_rgba(35,192,173,0.4)]
+                  transition-all duration-300 hover:scale-105 hover:bg-[#C42F35]/10 hover:shadow-[0_0_30px_rgba(196,47,53,0.4)]
                   relative
                 "
               >
-                <span className="relative z-10 text-sm md:text-base pointer-events-none text-[#23C0AD] group-hover:text-white transition-colors">
+                <span className="relative z-10 text-sm md:text-base pointer-events-none text-[#C42F35] group-hover:text-white transition-colors">
                   Startup Expo
                 </span>
                 
                 {/* Colored Circle with Arrow - FIXED */}
-                <div className="relative z-10 w-8 h-8 bg-[#23C0AD] group-hover:bg-white rounded-full flex items-center justify-center transition-colors">
-                  <FaArrowRight className="text-white group-hover:text-[#23C0AD] text-sm transition-colors" />
+                <div className="relative z-10 w-8 h-8 bg-[#C42F35] group-hover:bg-white rounded-full flex items-center justify-center transition-colors">
+                  <FaArrowRight className="text-white group-hover:text-[#C42F35] text-sm transition-colors" />
                 </div>
               </button>
             </Link>
