@@ -6,7 +6,7 @@ import { FaXTwitter, FaYoutube } from "react-icons/fa6";
 export default function Footer() {
   const linksData = [
     {
-      href: "https://www.ecelliitbhu.in/sw/",
+      href: "https://techstars-weekend.vercel.app/",
       text: "Startup Weekend Varanasi",
     },
     {
