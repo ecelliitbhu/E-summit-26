@@ -264,7 +264,7 @@
 // // //         //                     Select city
 // // //         //                 </option>
 // // //         //                 <option value="Bangalore">Bangalore</option>
-// // //         //                 <option value="Ahmedabad">Ahmedabad</option>
+// // //         //                 <option value="Mumbai">Mumbai</option>
 // // //         //                 <option value="Delhi">Delhi</option>
 // // //         //             </select>
 // // //         //         </div>
@@ -996,7 +996,7 @@
 //         //                     Select city
 //         //                 </option>
 //         //                 <option value="Bangalore">Bangalore</option>
-//         //                 <option value="Ahmedabad">Ahmedabad</option>
+//         //                 <option value="Mumbai">Mumbai</option>
 //         //                 <option value="Delhi">Delhi</option>
 //         //             </select>
 //         //         </div>

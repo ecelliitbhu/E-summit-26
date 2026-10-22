@@ -17,18 +17,18 @@ export default function SJPage() {
         <div className="max-w-4xl mx-auto flex flex-col items-center gap-10">
           <div className="w-full">
             <h1 className="text-4xl md:text-6xl font-bold mb-4 text-[#13324F]">
-              Startup Junction 2025
+              Startup Junction 2026
             </h1>
             <p className="text-xl md:text-2xl text-[#C42F35] mb-6 italic">
               Where Ambition Meets Investment
             </p>
             <p className="text-lg md:text-xl max-w-2xl mx-auto mb-4 text-gray-300">
               An exclusive forum connecting high-potential startups with India’s top
-              venture firms — in Bangalore, Delhi, and Ahmedabad.
+              venture firms — in Bangalore, Delhi, and Mumbai.
             </p>
             <p className="text-lg font-medium mb-6 text-gray-200">
               Date:{" "}
-              <span className="text-[#F86531] font-semibold">December 6, 2025</span>
+              <span className="text-[#F86531] font-semibold">December 5, 2026</span>
             </p>
 
         
@@ -82,7 +82,7 @@ export default function SJPage() {
           {[
             { title: "20+ Startups", desc: "Handpicked for relevance and readiness" },
             { title: "10+ VC Firms", desc: "From leading venture ecosystems" },
-            { title: "3 Cities", desc: "Bangalore • Delhi • Ahmedabad" },
+            { title: "3 Cities", desc: "Bangalore • Delhi • Mumbai" },
           ].map((item, i) => (
             <Card key={i} className="border-[#C42F35]/30 bg-[#121212] shadow-md overflow-hidden">
               <CardContent className="text-center py-10">
@@ -101,7 +101,7 @@ export default function SJPage() {
         </h2>
         <div className="max-w-5xl mx-auto space-y-6 text-gray-300 text-lg leading-relaxed">
           <p>
-            Startup Junction 2025 is not just another startup event — it’s a bridge between
+            Startup Junction 2026 is not just another startup event — it’s a bridge between
             vision and investment.
           </p>
           <p>
