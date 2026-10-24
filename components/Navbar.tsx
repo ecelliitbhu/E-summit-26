@@ -20,7 +20,7 @@ const navItems = [
     { name: "Startup-Expo", link: "/startup-expo" },
     { name: "Million Dollar Pitch", link: "/milliondollarpitch" },
 ];
-const sjCities = ["delhi", "ahmedabad", "bangalore"];
+const sjCities = ["delhi", "mumbai", "bangalore"];
 const Navbar: FunctionComponent = () => {
     const pathname = usePathname();
     const [scrolling, setScrolling] = useState(false);
