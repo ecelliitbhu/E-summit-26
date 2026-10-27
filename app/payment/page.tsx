@@ -1098,7 +1098,12 @@ const PageContent: FunctionComponent = () => {
 	const router = useRouter();
 	const initialType = searchParams?.get("type") || "esummit";
 	const [type, setType] = useState(initialType);
-	const { isAuthenticated, hasProfile, login, status: authStatus } = useESummitAuth();
+	const {
+		isAuthenticated,
+		hasProfile,
+		login,
+		status: authStatus,
+	} = useESummitAuth();
 
 	const tabs = [
 		{ key: "esummit", label: "E-Summit" },
@@ -1154,10 +1159,16 @@ const PageContent: FunctionComponent = () => {
 												Sign In to Book Passes
 											</h3>
 											<p className="text-gray-300 text-sm mb-6 max-w-md mx-auto leading-relaxed">
-												Please log in with Google to unlock E-Summit &apos;27 event passes and registrations.
+												Please log in with Google to
+												unlock E-Summit &apos;27 event
+												passes and registrations.
 											</p>
 											<Button
-												onClick={() => login("/payment?type=esummit")}
+												onClick={() =>
+													login(
+														"/payment?type=esummit",
+													)
+												}
 												className="bg-gradient-to-r from-[#F86531] via-[#C42F35] to-[#13324F] text-black font-bold px-8 py-6 rounded-xl hover:opacity-90 shadow-[0_0_20px_rgba(248,101,49,0.4)]"
 											>
 												Sign In with Google
@@ -1173,17 +1184,23 @@ const PageContent: FunctionComponent = () => {
 												Complete Your Profile Details
 											</h3>
 											<p className="text-gray-300 text-sm mb-6 max-w-md mx-auto leading-relaxed">
-												Please fill your student and college details once to unlock the KonfHub pass registration.
+												Please fill your student and
+												college details once to unlock
+												the KonfHub pass registration.
 											</p>
 											<Button
-												onClick={() => router.push("/profile?redirect=/payment?type=esummit")}
+												onClick={() =>
+													router.push(
+														"/profile?redirect=/payment?type=esummit",
+													)
+												}
 												className="bg-gradient-to-r from-[#F86531] via-[#C42F35] to-[#13324F] text-black font-bold px-8 py-6 rounded-xl hover:opacity-90 shadow-[0_0_20px_rgba(248,101,49,0.4)]"
 											>
 												Fill Details Form
 											</Button>
 										</div>
 									) : (
-										<div className="w-full bg-black/60 border border-white/15 rounded-3xl p-8 backdrop-blur-xl text-center shadow-[0_8px_32px_0_rgba(0,0,0,0.5)]">
+										<div className="w-full text-center">
 											<div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-4">
 												<ShieldCheck className="w-3.5 h-3.5" />
 												Registration Form Accessible
@@ -1192,7 +1209,9 @@ const PageContent: FunctionComponent = () => {
 												Book Your E-Summit Pass
 											</h3>
 											<p className="text-gray-300 text-sm mb-6 max-w-md mx-auto">
-												Official registration powered by KonfHub widget. Click below to book:
+												Official registration powered by
+												KonfHub widget. Click below to
+												book:
 											</p>
 											<div className="w-full flex justify-center">
 												<KonfHubButton buttonId="btn_0873c479a20e" />
@@ -1364,7 +1383,9 @@ const PageContent: FunctionComponent = () => {
 										Startup Expo &amp; Showcase Passes
 									</h3>
 									<p className="text-gray-300 text-sm mb-6 leading-relaxed">
-										Register your startup for exhibition booth, investor pitch, and demo day through our Startup Expo portal.
+										Register your startup for exhibition
+										booth, investor pitch, and demo day
+										through our Startup Expo portal.
 									</p>
 									<Link href="/startup-expo">
 										<Button className="bg-gradient-to-r from-[#F86531] via-[#C42F35] to-[#13324F] text-black font-bold px-8 py-6 rounded-xl hover:opacity-90">
