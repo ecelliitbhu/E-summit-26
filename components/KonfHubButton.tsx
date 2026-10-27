@@ -3,6 +3,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sparkles, X } from "lucide-react";
+import { useESummitAuth } from "@/context/ESummitAuthContext";
+import { trackRegistrationIntent } from "@/lib/api";
 
 interface KonfHubButtonProps {
   buttonId?: string;
@@ -15,6 +17,26 @@ export default function KonfHubButton({
 }: KonfHubButtonProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isOpenModal, setIsOpenModal] = useState(false);
+  const { user, student } = useESummitAuth();
+
+  const handleRegisterClick = () => {
+    setIsOpenModal(true);
+
+    if (user?.email) {
+      trackRegistrationIntent({
+        userId: user.id || null,
+        userEmail: user.email,
+        userName: student?.name || user.name || null,
+        eventSlug: "esummit-27",
+        eventName: "E-Summit '27 Pass",
+        platform: "konfhub",
+        status: "clicked",
+      }).catch((err) => {
+        console.warn("Registration intent tracking error:", err);
+      });
+    }
+  };
+
 
   useEffect(() => {
     const container = containerRef.current;
@@ -71,7 +93,7 @@ export default function KonfHubButton({
       {/* Our single custom styled Register Button */}
       <Button
         type="button"
-        onClick={() => setIsOpenModal(true)}
+        onClick={handleRegisterClick}
         className="
           bg-gradient-to-r from-[#F86531] via-[#C42F35] to-[#13324F]
           text-white font-bold px-8 py-6 rounded-xl text-base
@@ -88,11 +110,12 @@ export default function KonfHubButton({
       {/* KonfHub Dialog Modal - Positioned with safe top spacing so close button is always visible & clickable */}
       {isOpenModal && (
         <div
-          className="fixed inset-0 z-[100000] flex items-center justify-center bg-black/85 backdrop-blur-md p-4 pt-24 pb-8 overflow-y-auto"
+          className="fixed inset-0 z-[100000] flex items-center justify-center bg-black/85 backdrop-blur-md p-4 pt-28 sm:pt-32 pb-8 overflow-y-auto"
           onClick={(e) => {
             if (e.target === e.currentTarget) setIsOpenModal(false);
           }}
         >
+
           <div className="relative w-full max-w-2xl bg-zinc-950 border border-white/20 rounded-2xl shadow-2xl overflow-hidden flex flex-col h-[82vh] max-h-[680px] my-auto animate-in fade-in zoom-in-95 duration-200">
             {/* Modal Header */}
             <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-zinc-900/90 z-20 shrink-0">

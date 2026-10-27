@@ -1200,7 +1200,7 @@ const PageContent: FunctionComponent = () => {
 											</Button>
 										</div>
 									) : (
-										<div className="w-full text-center">
+										<div id="konfhub-booking-section" className="w-full text-center">
 											<div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-4">
 												<ShieldCheck className="w-3.5 h-3.5" />
 												Registration Form Accessible
@@ -1368,11 +1368,20 @@ const PageContent: FunctionComponent = () => {
 
 								{/* CTA */}
 								<div className="flex justify-center mb-20">
-									<Link href="/payment">
-										<button className="pass-button">
-											Get Pass
-										</button>
-									</Link>
+									<button
+										type="button"
+										onClick={() => {
+											const el = document.getElementById("konfhub-booking-section");
+											if (el) {
+												el.scrollIntoView({ behavior: "smooth" });
+											} else {
+												router.push("/payment?type=esummit");
+											}
+										}}
+										className="pass-button"
+									>
+										Get Pass
+									</button>
 								</div>
 							</>
 						)}
