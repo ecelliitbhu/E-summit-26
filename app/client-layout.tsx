@@ -95,24 +95,28 @@ import "./globals.css";
 import React from "react";
 import BackgroundWrapper from "./BackgroundWrapper";
 import ScrollTicket from "@/components/ui/ScrollTicket";
+import { Providers } from "./providers";
 
 export function ClientLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <body
-        className={cn(
-          "min-h-screen font-sans antialiased relative",
-          fontSans.variable
-        )}
-      >
-        <BackgroundWrapper />
-        <ScrollTicket/>
+	return (
+		<html lang="en">
+			<body
+				className={cn(
+					"min-h-screen font-sans antialiased relative",
+					fontSans.variable,
+				)}
+			>
+				<Providers>
+					<BackgroundWrapper />
+					<ScrollTicket />
 
-        <Navbar />
-        <main className="flex-1 relative z-10">{children}</main>
-        <Footer />
-        <Toaster />
-      </body>
-    </html>
-  );
+					<Navbar />
+					<main className="flex-1 relative z-10">{children}</main>
+					<Footer />
+					<Toaster />
+				</Providers>
+			</body>
+		</html>
+	);
 }
+
