@@ -646,7 +646,6 @@
 // // export const dynamic = "force-dynamic";
 // // export const fetchCache = "force-no-store";
 
-
 // "use client";
 // import React, { FunctionComponent, useState } from "react";
 // import { useSearchParams } from "next/navigation";
@@ -1078,177 +1077,365 @@
 //   );
 // };
 
-
-
 // to fix build errors---- do check
 "use client";
 
 import React, { Suspense, useState, FunctionComponent } from "react";
-import { useSearchParams } from "next/navigation";
-import PassCard from "../../components/ui/TicketCard"; 
+import { useSearchParams, useRouter } from "next/navigation";
+import PassCard from "../../components/ui/TicketCard";
 import Link from "next/link";
-import "./../pass/pass.css"; 
+import "./../pass/pass.css";
+import { useESummitAuth } from "@/context/ESummitAuthContext";
+import KonfHubButton from "@/components/KonfHubButton";
+import { Button } from "@/components/ui/button";
+import { LogIn, UserCheck, ShieldCheck, Ticket } from "lucide-react";
 
 // -----------------------------
 // INTERNAL PAGE CONTENT
 // -----------------------------
 const PageContent: FunctionComponent = () => {
-  const searchParams = useSearchParams();
-  const initialType = searchParams?.get("type") || "esummit";
-  const [type, setType] = useState(initialType);
+	const searchParams = useSearchParams();
+	const router = useRouter();
+	const initialType = searchParams?.get("type") || "esummit";
+	const [type, setType] = useState(initialType);
+	const {
+		isAuthenticated,
+		hasProfile,
+		login,
+		status: authStatus,
+	} = useESummitAuth();
 
-  const tabs = [
-    { key: "esummit", label: "E-Summit" },
-    { key: "esummit_startups", label: "E-Summit for Startups" },
-    { key: "startup_junction", label: "Startup Junction" },
-  ];
+	const tabs = [
+		{ key: "esummit", label: "E-Summit" },
+		{ key: "esummit_startups", label: "E-Summit for Startups" },
+		{ key: "startup_junction", label: "Startup Junction" },
+	];
 
-  return (
-    <section className="w-screen md:mt-14 p-4">
-      <div className="flex flex-col items-center justify-start w-full min-h-[80vh] pt-6">
-
-        {/* ---------------- TABS ---------------- */}
-        <div className="flex gap-2 mt-14 mb-7 bg-gray-900/70 border border-gray-700 rounded-xl p-1">
-          {tabs.map((tab) => {
-            const active = type === tab.key;
-            return (
-              <button
-                key={tab.key}
-                onClick={() => setType(tab.key)}
-                className={`
+	return (
+		<section className="w-screen md:mt-14 p-4">
+			<div className="flex flex-col items-center justify-start w-full min-h-[80vh] pt-6">
+				{/* ---------------- TABS ---------------- */}
+				<div className="flex gap-2 mt-14 mb-7 bg-gray-900/70 border border-gray-700 rounded-xl p-1">
+					{tabs.map((tab) => {
+						const active = type === tab.key;
+						return (
+							<button
+								key={tab.key}
+								onClick={() => setType(tab.key)}
+								className={`
                   px-4 py-2 rounded-lg text-sm font-medium transition-all
-                  ${active
-                    ? "bg-gray-900 text-white shadow"
-                    : "text-gray-300 hover:text-white hover:bg-gray-800"}
+                  ${
+						active
+							? "bg-gray-900 text-white shadow"
+							: "text-gray-300 hover:text-white hover:bg-gray-800"
+					}
                 `}
-              >
-                {tab.label}
-              </button>
-            );
-          })}
-        </div>
+							>
+								{tab.label}
+							</button>
+						);
+					})}
+				</div>
 
-        {/* -------------- E-SUMMIT BOOKINGS -------------- */}
-        {(type === "esummit" || type === "esummit_startups") && (
-          <>
-            {/* Townscript iframe */}
-            {(type==="esummit")&&(
-                <>
-                <div className="w-full flex justify-center mb-20">
-              <iframe
-                id="ts-iframe"
-                src="https://www.townscript.com/v2/widget/esummit-2026-iitbhu-103000/booking"
-                height="600"
-                width="80%"
-                className="rounded-xl"
-                ></iframe>
-            </div>
-            {/* Passes */}
-            <div className="pass-container gap-10 justify-center mb-10">
-              <PassCard
-                title="Silver Pass"
-                originalPrice={799}
-                priceText="₹649/-"
-                features={[
-                  { label: "Hospitality Kit", available: true },
-                  { label: "Keynote Speaker Session", available: true },
-                  { label: "Fireside Chat with Founders", available: true },
-                  { label: "Networking at Startup Expo", available: true },
-                  { label: "Events and Competitions", available: true },
-                  { label: "Access to Panel Discussions", available: true },
-                  { label: "Accomodation", available: false },
-                  { label: "Vouchers and Perks from sponsors", available: false },
-                  { label: "E-summit Merch", available: false },
-                  { label: "Food from Fri. night to Sun. night", available: false },
-                ]}
-              />
+				{/* -------------- E-SUMMIT BOOKINGS -------------- */}
+				{(type === "esummit" || type === "esummit_startups") && (
+					<>
+						{/* KonfHub Registration Widget */}
+						{type === "esummit" && (
+							<>
+								<div className="w-full max-w-2xl flex flex-col items-center justify-center mb-16 px-4">
+									{authStatus === "loading" ? (
+										<div className="flex items-center gap-3 py-10 text-gray-400">
+											<div className="w-6 h-6 border-2 border-[#F86531] border-t-transparent rounded-full animate-spin" />
+											Checking account status...
+										</div>
+									) : !isAuthenticated ? (
+										<div className="w-full bg-black/60 border border-white/10 rounded-3xl p-8 backdrop-blur-xl text-center shadow-2xl">
+											<div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F86531]/10 border border-[#F86531]/30 text-[#F86531] text-xs font-semibold mb-4">
+												<LogIn className="w-3.5 h-3.5" />
+												Login Required
+											</div>
+											<h3 className="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#F86531] via-[#C42F35] to-white mb-3">
+												Sign In to Book Passes
+											</h3>
+											<p className="text-gray-300 text-sm mb-6 max-w-md mx-auto leading-relaxed">
+												Please log in with Google to
+												unlock E-Summit &apos;27 event
+												passes and registrations.
+											</p>
+											<Button
+												onClick={() =>
+													login(
+														"/payment?type=esummit",
+													)
+												}
+												className="bg-gradient-to-r from-[#F86531] via-[#C42F35] to-[#13324F] text-black font-bold px-8 py-6 rounded-xl hover:opacity-90 shadow-[0_0_20px_rgba(248,101,49,0.4)]"
+											>
+												Sign In with Google
+											</Button>
+										</div>
+									) : !hasProfile ? (
+										<div className="w-full bg-black/60 border border-white/10 rounded-3xl p-8 backdrop-blur-xl text-center shadow-2xl">
+											<div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F86531]/10 border border-[#F86531]/30 text-[#F86531] text-xs font-semibold mb-4">
+												<UserCheck className="w-3.5 h-3.5" />
+												Details Required
+											</div>
+											<h3 className="text-2xl md:text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#F86531] via-[#C42F35] to-white mb-3">
+												Complete Your Profile Details
+											</h3>
+											<p className="text-gray-300 text-sm mb-6 max-w-md mx-auto leading-relaxed">
+												Please fill your student and
+												college details once to unlock
+												the KonfHub pass registration.
+											</p>
+											<Button
+												onClick={() =>
+													router.push(
+														"/profile?redirect=/payment?type=esummit",
+													)
+												}
+												className="bg-gradient-to-r from-[#F86531] via-[#C42F35] to-[#13324F] text-black font-bold px-8 py-6 rounded-xl hover:opacity-90 shadow-[0_0_20px_rgba(248,101,49,0.4)]"
+											>
+												Fill Details Form
+											</Button>
+										</div>
+									) : (
+										<div id="konfhub-booking-section" className="w-full text-center">
+											<div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-4">
+												<ShieldCheck className="w-3.5 h-3.5" />
+												Registration Form Accessible
+											</div>
+											<h3 className="text-2xl md:text-3xl font-extrabold text-white mb-2">
+												Book Your E-Summit Pass
+											</h3>
+											<p className="text-gray-300 text-sm mb-6 max-w-md mx-auto">
+												Official registration powered by
+												KonfHub widget. Click below to
+												book:
+											</p>
+											<div className="w-full flex justify-center">
+												<KonfHubButton buttonId="btn_0873c479a20e" />
+											</div>
+										</div>
+									)}
+								</div>
+								{/* Passes */}
+								<div className="pass-container gap-10 justify-center mb-10">
+									<PassCard
+										title="Silver Pass"
+										originalPrice={799}
+										priceText="₹649/-"
+										features={[
+											{
+												label: "Hospitality Kit",
+												available: true,
+											},
+											{
+												label: "Keynote Speaker Session",
+												available: true,
+											},
+											{
+												label: "Fireside Chat with Founders",
+												available: true,
+											},
+											{
+												label: "Networking at Startup Expo",
+												available: true,
+											},
+											{
+												label: "Events and Competitions",
+												available: true,
+											},
+											{
+												label: "Access to Panel Discussions",
+												available: true,
+											},
+											{
+												label: "Accomodation",
+												available: false,
+											},
+											{
+												label: "Vouchers and Perks from sponsors",
+												available: false,
+											},
+											{
+												label: "E-summit Merch",
+												available: false,
+											},
+											{
+												label: "Food from Fri. night to Sun. night",
+												available: false,
+											},
+										]}
+									/>
 
-              <PassCard
-                title="Gold Pass"
-                originalPrice={2099}
-                priceText="₹1899/-"
-                features={[
-                  { label: "Hospitality Kit", available: true },
-                  { label: "Keynote Speaker Session", available: true },
-                  { label: "Fireside Chat with Founders", available: true },
-                  { label: "Networking at Startup Expo", available: true },
-                  { label: "Events and Competitions", available: true },
-                  { label: "Access to Panel Discussions", available: true },
-                  { label: "Accomodation", available: true },
-                  { label: "Vouchers and Perks from sponsors", available: true },
-                  { label: "E-summit Merch", available: true },
-                  { label: "Food from Fri. night to Sun. night", available: false },
-                ]}
-              />
+									<PassCard
+										title="Gold Pass"
+										originalPrice={2099}
+										priceText="₹1899/-"
+										features={[
+											{
+												label: "Hospitality Kit",
+												available: true,
+											},
+											{
+												label: "Keynote Speaker Session",
+												available: true,
+											},
+											{
+												label: "Fireside Chat with Founders",
+												available: true,
+											},
+											{
+												label: "Networking at Startup Expo",
+												available: true,
+											},
+											{
+												label: "Events and Competitions",
+												available: true,
+											},
+											{
+												label: "Access to Panel Discussions",
+												available: true,
+											},
+											{
+												label: "Accomodation",
+												available: true,
+											},
+											{
+												label: "Vouchers and Perks from sponsors",
+												available: true,
+											},
+											{
+												label: "E-summit Merch",
+												available: true,
+											},
+											{
+												label: "Food from Fri. night to Sun. night",
+												available: false,
+											},
+										]}
+									/>
 
-              <PassCard
-                title="Diamond Pass"
-                originalPrice={2399}
-                priceText="₹2199/-"
-                features={[
-                  { label: "Hospitality Kit", available: true },
-                  { label: "Keynote Speaker Session", available: true },
-                  { label: "Fireside Chat with Founders", available: true },
-                  { label: "Networking at Startup Expo", available: true },
-                  { label: "Events and Competitions", available: true },
-                  { label: "Access to Panel Discussions", available: true },
-                  { label: "Accomodation", available: true },
-                  { label: "Vouchers and Perks from sponsors", available: true },
-                  { label: "E-summit Merch", available: true },
-                  { label: "Food from Fri. night to Sun. night", available: true },
-                ]}
-              />
-            </div>
+									<PassCard
+										title="Diamond Pass"
+										originalPrice={2399}
+										priceText="₹2199/-"
+										features={[
+											{
+												label: "Hospitality Kit",
+												available: true,
+											},
+											{
+												label: "Keynote Speaker Session",
+												available: true,
+											},
+											{
+												label: "Fireside Chat with Founders",
+												available: true,
+											},
+											{
+												label: "Networking at Startup Expo",
+												available: true,
+											},
+											{
+												label: "Events and Competitions",
+												available: true,
+											},
+											{
+												label: "Access to Panel Discussions",
+												available: true,
+											},
+											{
+												label: "Accomodation",
+												available: true,
+											},
+											{
+												label: "Vouchers and Perks from sponsors",
+												available: true,
+											},
+											{
+												label: "E-summit Merch",
+												available: true,
+											},
+											{
+												label: "Food from Fri. night to Sun. night",
+												available: true,
+											},
+										]}
+									/>
+								</div>
 
-            {/* CTA */}
-            <div className="flex justify-center mb-20">
-              <Link href="/payment">
-                <button className="pass-button">Get Pass</button>
-              </Link>
-            </div>
-            </>
-            )}
-            {(type==="esummit_startups")&&(
-                <div className="w-full flex justify-center mb-20">
-                    <iframe 
-                        id="ts-iframe" 
-                        src="https://www.townscript.com/v2/widget/esummit-26-startups-120103/booking"  
-                        height="600" 
-                        width="80%"
-                        className="rounded-xl"
-                    ></iframe>
-            </div>
-            )}
-          </>
-        )}
+								{/* CTA */}
+								<div className="flex justify-center mb-20">
+									<button
+										type="button"
+										onClick={() => {
+											const el = document.getElementById("konfhub-booking-section");
+											if (el) {
+												el.scrollIntoView({ behavior: "smooth" });
+											} else {
+												router.push("/payment?type=esummit");
+											}
+										}}
+										className="pass-button"
+									>
+										Get Pass
+									</button>
+								</div>
+							</>
+						)}
+						{type === "esummit_startups" && (
+							<div className="w-full max-w-xl flex flex-col items-center justify-center mb-20 px-4 text-center">
+								<div className="w-full bg-black/60 border border-white/10 rounded-3xl p-8 backdrop-blur-xl shadow-2xl">
+									<h3 className="text-2xl font-bold text-white mb-3">
+										Startup Expo &amp; Showcase Passes
+									</h3>
+									<p className="text-gray-300 text-sm mb-6 leading-relaxed">
+										Register your startup for exhibition
+										booth, investor pitch, and demo day
+										through our Startup Expo portal.
+									</p>
+									<Link href="/startup-expo">
+										<Button className="bg-gradient-to-r from-[#F86531] via-[#C42F35] to-[#13324F] text-black font-bold px-8 py-6 rounded-xl hover:opacity-90">
+											Explore Startup Expo
+										</Button>
+									</Link>
+								</div>
+							</div>
+						)}
+					</>
+				)}
 
-        {/* -------------- STARTUP JUNCTION -------------- */}
-        {type === "startup_junction" && (
-          <div className="flex flex-col items-center text-center mt-20 border border-yellow-500/20 bg-black/40 rounded-2xl p-8">
-            <div className="text-4xl mb-3">😕</div>
-            <div className="font-bold text-xl text-yellow-400">
-              Registrations Closed
-            </div>
-            <div className="text-gray-400 text-sm mt-1">
-              Startup Junction registrations are no longer available.
-            </div>
-          </div>
-        )}
-      </div>
-    </section>
-  );
+				{/* -------------- STARTUP JUNCTION -------------- */}
+				{type === "startup_junction" && (
+					<div className="flex flex-col items-center text-center mt-20 border border-yellow-500/20 bg-black/40 rounded-2xl p-8">
+						<div className="text-4xl mb-3">😕</div>
+						<div className="font-bold text-xl text-yellow-400">
+							Registrations Closed
+						</div>
+						<div className="text-gray-400 text-sm mt-1">
+							Startup Junction registrations are no longer
+							available.
+						</div>
+					</div>
+				)}
+			</div>
+		</section>
+	);
 };
-
 
 // -----------------------------
 // DEFAULT EXPORT WRAPPER
 // -----------------------------
 export default function Page() {
-  return (
-    <Suspense fallback={<div className="text-white p-10">Loading payment...</div>}>
-      <PageContent />
-    </Suspense>
-  );
+	return (
+		<Suspense
+			fallback={<div className="text-white p-10">Loading payment...</div>}
+		>
+			<PageContent />
+		</Suspense>
+	);
 }
 
 // Forces fresh fetch + avoids prerender crash
